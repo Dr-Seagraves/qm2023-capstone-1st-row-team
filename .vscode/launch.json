@@ -1,0 +1,28 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Start Dashboard",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/start.py",
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    },
+    {
+      "name": "Start Dashboard (Production)",
+      "type": "debugpy",
+      "request": "launch",
+      "program": "${workspaceFolder}/start.py",
+      "args": ["--prod"],
+      "console": "integratedTerminal",
+      "cwd": "${workspaceFolder}",
+      "env": {
+        "PYTHONUNBUFFERED": "1"
+      }
+    }
+  ]
+}
