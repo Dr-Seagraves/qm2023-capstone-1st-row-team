@@ -1,0 +1,49 @@
+[2026-02-19 18:32:27] [INFO] [pipeline.runner] Running step: fetch (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\fetch\fetch_all.py)
+[2026-02-19 18:32:30] [INFO] [pipeline.runner] Step fetch: success
+[2026-02-19 18:32:40] [INFO] [pipeline.runner] Running step: filter (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\filter\filter_all.py)
+[2026-02-19 18:32:40] [INFO] [pipeline.runner] Step filter: success
+[2026-02-19 18:32:45] [INFO] [pipeline.runner] Running step: merge (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\merge\merge_all.py)
+[2026-02-19 18:32:45] [INFO] [pipeline.runner] Step merge: success
+[2026-02-19 23:10:36] [INFO] [pipeline.runner] Running step: fetch (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\fetch\fetch_all.py)
+[2026-02-19 23:10:38] [INFO] [pipeline.runner] Step fetch: success
+[2026-02-19 23:10:38] [INFO] [pipeline.runner] Running step: filter (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\filter\filter_all.py)
+[2026-02-19 23:10:39] [INFO] [pipeline.runner] Step filter: success
+[2026-02-19 23:10:39] [INFO] [pipeline.runner] Running step: merge (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\merge\merge_all.py)
+[2026-02-19 23:10:39] [INFO] [pipeline.runner] Step merge: success
+[2026-02-19 23:11:24] [INFO] [pipeline.runner] Running step: fetch (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\fetch\fetch_all.py)
+[2026-02-19 23:11:26] [INFO] [pipeline.runner] Step fetch: success
+[2026-02-19 23:11:27] [INFO] [pipeline.runner] Running step: filter (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\filter\filter_all.py)
+[2026-02-19 23:11:28] [INFO] [pipeline.runner] Step filter: success
+[2026-02-19 23:11:29] [INFO] [pipeline.runner] Running step: merge (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\merge\merge_all.py)
+[2026-02-19 23:11:29] [INFO] [pipeline.runner] Step merge: success
+[2026-02-19 23:21:14] [INFO] [pipeline.runner] Running step: fetch (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\fetch\fetch_all.py)
+[2026-02-19 23:21:16] [INFO] [pipeline.runner] Step fetch: success
+[2026-02-19 23:21:16] [INFO] [pipeline.runner] Running step: filter (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\filter\filter_all.py)
+[2026-02-19 23:21:17] [INFO] [pipeline.runner] Step filter: success
+[2026-02-19 23:21:17] [INFO] [pipeline.runner] Running step: merge (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\merge\merge_all.py)
+[2026-02-19 23:21:17] [INFO] [pipeline.runner] Step merge: error
+[2026-02-19 23:21:17] [WARNING] [pipeline.runner] Pipeline stopped at merge due to error
+[2026-02-19 23:24:38] [INFO] [pipeline.runner] Running step: fetch (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\fetch\fetch_all.py)
+[2026-02-19 23:24:54] [INFO] [pipeline.runner] Step fetch: success
+[2026-02-19 23:24:54] [INFO] [pipeline.runner] Running step: filter (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\filter\filter_all.py)
+[2026-02-19 23:24:57] [INFO] [pipeline.runner] Step filter: success
+[2026-02-19 23:24:57] [INFO] [pipeline.runner] Running step: merge (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\merge\merge_all.py)
+[2026-02-19 23:24:58] [INFO] [pipeline.runner] Step merge: success
+[2026-02-19 23:36:20] [INFO] [pipeline.runner] Running step: fetch (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\fetch\fetch_all.py)
+[2026-02-19 23:36:25] [INFO] [pipeline.runner] Step fetch: success
+[2026-02-19 23:36:25] [INFO] [pipeline.runner] Running step: filter (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\filter\filter_all.py)
+[2026-02-19 23:36:27] [INFO] [pipeline.runner] Step filter: success
+[2026-02-19 23:36:27] [INFO] [pipeline.runner] Running step: merge (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\merge\merge_all.py)
+[2026-02-19 23:36:28] [INFO] [pipeline.runner] Step merge: success
+[2026-02-20 00:11:45] [INFO] [pipeline.runner] Running step: fetch (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\fetch\fetch_all.py)
+[2026-02-20 00:16:47] [INFO] [pipeline.runner] Step fetch: success
+[2026-02-20 00:16:47] [INFO] [pipeline.runner] Running step: filter (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\filter\filter_all.py)
+[2026-02-20 00:16:50] [INFO] [pipeline.runner] Step filter: success
+[2026-02-20 00:16:50] [INFO] [pipeline.runner] Running step: merge (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\merge\merge_all.py)
+[2026-02-20 00:16:50] [INFO] [pipeline.runner] Step merge: success
+[2026-02-20 00:47:27] [INFO] [pipeline.runner] Running step: fetch (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\fetch\fetch_all.py)
+[2026-02-20 00:47:31] [INFO] [pipeline.runner] Step fetch: success
+[2026-02-20 00:47:31] [INFO] [pipeline.runner] Running step: clean (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\clean\clean_all.py)
+[2026-02-20 00:47:37] [INFO] [pipeline.runner] Step clean: success
+[2026-02-20 00:47:37] [INFO] [pipeline.runner] Running step: build (D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\code\build\build_master.py)
+[2026-02-20 00:47:43] [INFO] [pipeline.runner] Step build: success

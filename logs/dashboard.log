@@ -1,0 +1,67 @@
+[2026-02-19 18:15:40] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-19 18:15:47] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-19 18:30:40] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-19 18:32:27] [INFO] [dashboard.pipeline] Running pipeline step: fetch
+[2026-02-19 18:32:40] [INFO] [dashboard.pipeline] Running pipeline step: filter
+[2026-02-19 18:32:45] [INFO] [dashboard.pipeline] Running pipeline step: merge
+[2026-02-19 18:36:54] [INFO] [dashboard.config_manager] Saved 14 sources to D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\config\dataset_sources.txt
+[2026-02-19 18:36:54] [INFO] [dashboard.settings] Updated data sources: 14 URLs
+[2026-02-19 23:03:28] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-19 23:09:12] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-19 23:10:36] [INFO] [dashboard.pipeline] Running full pipeline
+[2026-02-19 23:11:24] [INFO] [dashboard.pipeline] Running pipeline step: fetch
+[2026-02-19 23:11:27] [INFO] [dashboard.pipeline] Running pipeline step: filter
+[2026-02-19 23:11:29] [INFO] [dashboard.pipeline] Running pipeline step: merge
+[2026-02-19 23:17:43] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-19 23:17:51] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-19 23:20:58] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-19 23:21:14] [INFO] [dashboard.pipeline] Running full pipeline
+[2026-02-19 23:24:28] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-19 23:24:38] [INFO] [dashboard.pipeline] Running full pipeline
+[2026-02-19 23:36:07] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-19 23:36:20] [INFO] [dashboard.pipeline] Running full pipeline
+[2026-02-20 00:09:49] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 00:10:04] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 00:11:45] [INFO] [dashboard.pipeline] Running full pipeline
+[2026-02-20 00:26:54] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 00:31:59] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 00:32:09] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 00:33:05] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 00:34:41] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 00:35:15] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 00:47:27] [INFO] [dashboard.pipeline] Running full pipeline
+[2026-02-20 00:47:54] [INFO] [dashboard.config_manager] Saved column config to D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\config\column_config.json
+[2026-02-20 00:47:54] [INFO] [dashboard.dictionary] Auto-populated column_config.json with 40 datasets
+[2026-02-20 00:48:30] [INFO] [dashboard.config_manager] Saved 13 sources to D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\config\dataset_sources.txt
+[2026-02-20 00:48:30] [INFO] [dashboard.settings] Updated data sources: 13 URLs
+[2026-02-20 01:28:10] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 01:28:28] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 01:30:01] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 01:30:02] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 01:30:55] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 01:31:36] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 01:31:56] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 01:33:13] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 01:38:40] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 01:39:41] [INFO] [dashboard.config_manager] Saved column config to D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\config\column_config.json
+[2026-02-20 01:39:41] [INFO] [dashboard.settings] Updated column config
+[2026-02-20 01:39:42] [INFO] [dashboard.config_manager] Saved column config to D:\Users\Logan\Documents\GitHub\qm2023-capstone-1st-row-team\config\column_config.json
+[2026-02-20 01:39:42] [INFO] [dashboard.settings] Updated column config
+[2026-02-20 02:11:43] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 02:13:36] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 02:13:55] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 02:14:24] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 02:14:24] [INFO] [dashboard.data] Reset all columns to excluded
+[2026-02-20 02:14:24] [INFO] [dashboard.data] Rebuilt master_dataset: 0 rows × 0 cols from 0 datasets
+[2026-02-20 02:14:36] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 02:14:36] [INFO] [dashboard.data] Updated 2 column(s)
+[2026-02-20 02:14:36] [INFO] [dashboard.data] Rebuilt master_dataset: 27 rows × 3 cols from 1 datasets
+[2026-02-20 02:14:46] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 02:14:55] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-20 02:14:55] [INFO] [dashboard.data] Reset all columns to excluded
+[2026-02-20 02:14:55] [INFO] [dashboard.data] Rebuilt master_dataset: 0 rows × 0 cols from 0 datasets
+[2026-02-20 02:15:08] [INFO] [dashboard.app] Flask app created (debug=True)
+[2026-02-20 02:15:10] [INFO] [dashboard.app] Flask app created (debug=True)
+[2026-02-20 02:17:19] [INFO] [dashboard.app] Flask app created (debug=True)
+[2026-02-20 02:17:59] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-20 02:18:00] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file

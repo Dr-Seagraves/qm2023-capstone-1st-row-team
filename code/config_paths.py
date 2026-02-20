@@ -47,8 +47,16 @@ PROJECT_ROOT = find_project_root()
 # DIRECTORY PATHS
 # ==============================================================================
 
+# Config directory
+CONFIG_DIR = PROJECT_ROOT / 'config'
+
 # Code directory
 CODE_DIR = PROJECT_ROOT / 'code'
+FETCH_DIR = CODE_DIR / 'fetch'
+CLEAN_DIR = CODE_DIR / 'clean'
+FILTER_DIR = CODE_DIR / 'filter'
+MERGE_DIR = CODE_DIR / 'merge'
+BUILD_DIR = CODE_DIR / 'build'
 
 # Data directories
 DATA_DIR = PROJECT_ROOT / 'data'
@@ -62,6 +70,12 @@ FIGURES_DIR = RESULTS_DIR / 'figures'
 TABLES_DIR = RESULTS_DIR / 'tables'
 REPORTS_DIR = RESULTS_DIR / 'reports'
 
+# Logs directory
+LOGS_DIR = PROJECT_ROOT / 'logs'
+
+# Dashboard directory
+DASHBOARD_DIR = PROJECT_ROOT / 'dashboard'
+
 # ==============================================================================
 # DIRECTORY CREATION
 # ==============================================================================
@@ -69,25 +83,29 @@ REPORTS_DIR = RESULTS_DIR / 'reports'
 def ensure_directories():
     """Create all necessary directories if they don't exist."""
     directories = [
+        CONFIG_DIR,
         CODE_DIR,
+        FETCH_DIR,
+        CLEAN_DIR,
+        FILTER_DIR,
+        MERGE_DIR,
+        BUILD_DIR,
         RAW_DATA_DIR,
         PROCESSED_DATA_DIR,
         FINAL_DATA_DIR,
         FIGURES_DIR,
         TABLES_DIR,
-        REPORTS_DIR
+        REPORTS_DIR,
+        LOGS_DIR,
     ]
 
     for directory in directories:
         directory.mkdir(parents=True, exist_ok=True)
 
-    print(f"\u2713 Project structure verified at: {PROJECT_ROOT}")
-
-# Auto-create directories on import
-ensure_directories()
+    print(f"[OK] Project structure verified at: {PROJECT_ROOT}")
 
 # ==============================================================================
-# UTF-8 ENCODING (Windows PowerShell fix)
+# UTF-8 ENCODING (Windows PowerShell fix) — must run BEFORE any Unicode output
 # ==============================================================================
 
 if sys.platform == 'win32':
@@ -96,6 +114,9 @@ if sys.platform == 'win32':
         sys.stderr.reconfigure(encoding='utf-8')
     except AttributeError:
         pass
+
+# Auto-create directories on import
+ensure_directories()
 
 # ==============================================================================
 # VERIFICATION
@@ -114,7 +135,11 @@ if __name__ == "__main__":
 
         paths = {
             'PROJECT_ROOT': PROJECT_ROOT,
+            'CONFIG_DIR': CONFIG_DIR,
             'CODE_DIR': CODE_DIR,
+            'FETCH_DIR': FETCH_DIR,
+            'FILTER_DIR': FILTER_DIR,
+            'MERGE_DIR': MERGE_DIR,
             'DATA_DIR': DATA_DIR,
             'RAW_DATA_DIR': RAW_DATA_DIR,
             'PROCESSED_DATA_DIR': PROCESSED_DATA_DIR,
@@ -123,6 +148,8 @@ if __name__ == "__main__":
             'FIGURES_DIR': FIGURES_DIR,
             'TABLES_DIR': TABLES_DIR,
             'REPORTS_DIR': REPORTS_DIR,
+            'LOGS_DIR': LOGS_DIR,
+            'DASHBOARD_DIR': DASHBOARD_DIR,
         }
 
         for name, path in paths.items():
