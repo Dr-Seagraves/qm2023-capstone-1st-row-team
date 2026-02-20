@@ -16,3 +16,6 @@ Semester-long capstone for Statistics II: Data Analytics.
 - **tests/** — Autograding test suite
 
 Run `python code/config_paths.py` to verify paths.
+
+Research Question: Does increased hurricane activity in Florida lead to lower REIT returns, especially for residential and retail REITs with property exposure in the state?
+Project Idea: For our project, we want to look at whether hurricane activity in Florida affects REIT returns. Specifically, we’re focusing on whether years with more hurricanes in Florida are linked to lower returns for residential and retail REITs that have property exposure in the state. Since hurricanes can damage properties, disrupt local economies, and increase overall real estate risk, we want to see if that risk actually shows up in the financial performance of these REITs.
