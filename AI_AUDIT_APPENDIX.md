@@ -1,9 +1,10 @@
 # Disclose, Verify, Critique
 
 ## AI Tools Used
-- [x] GitHub Copilot
+- GitHub Copilot
 
 ## Per Task
+1. Importing Data
 - **Task:** Import project datasets from URLs and/or downloaded CSV files into the analysis pipeline.
 - **Prompt:** "help me import this data" (with the dataset URL pasted in the prompt).
 - **AI Output:** AI generated code to load the provided data sources into dataframes/files for use in the project workflow.
@@ -13,7 +14,37 @@
 	- **What needed human judgment:** Source-specific details (column naming consistency, file path handling, and format assumptions) still required manual review.
 	- **Our corrections/actions:** We validated imported outputs against the original source and used instructor confirmation before proceeding.
 
-## Summary
-AI was used for initial data-ingestion support (importing datasets from URLs/CSVs). Primary use case was speeding up boilerplate import code. Verification was completed through manual source checks plus instructor confirmation.
+2. Data Dictionary
+**Task:** 
+- **Prompt:** 
+- **AI Output:** 
+- **Verification:** 
+- **Critique:**
+	- **What AI did well:**
+	- **What needed human judgment:** 
+	- **Our corrections/actions:** 
 
-Responsibility: All code is tested and our responsibility.
+3. README File
+**Task:** 
+- **Prompt:** 
+- **AI Output:** 
+- **Verification:** 
+- **Critique:**
+	- **What AI did well:** 
+	- **What needed human judgment:** 
+	- **Our corrections/actions:** 
+
+4. Master Code
+**Task:** 
+- **Prompt:** 
+- **AI Output:** 
+- **Verification:** 
+- **Critique:**
+	- **What AI did well:** 
+	- **What needed human judgment:** 
+	- **Our corrections/actions:** 
+
+
+
+## Summary
+
