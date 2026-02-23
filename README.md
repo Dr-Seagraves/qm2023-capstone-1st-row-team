@@ -21,3 +21,5 @@ Research Question: Does increased hurricane activity in Florida lead to lower RE
 
 
 Project Idea: For our project, we want to look at whether hurricane activity in Florida affects REIT returns. Specifically, we’re focusing on whether years with more hurricanes in Florida are linked to lower returns for residential and retail REITs that have property exposure in the state. Since hurricanes can damage properties, disrupt local economies, and increase overall real estate risk, we want to see if that risk actually shows up in the financial performance of these REITs.
+
+
