@@ -16,3 +16,4 @@ Semester-long capstone for Statistics II: Data Analytics.
 - **tests/** — Autograding test suite
 
 Run `python code/config_paths.py` to verify paths.
+
