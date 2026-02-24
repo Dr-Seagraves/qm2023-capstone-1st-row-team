@@ -65,3 +65,94 @@
 [2026-02-20 02:17:19] [INFO] [dashboard.app] Flask app created (debug=True)
 [2026-02-20 02:17:59] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
 [2026-02-20 02:18:00] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:06:40] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-23 14:08:11] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-23 14:10:24] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-23 14:10:46] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-23 14:21:12] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-23 14:21:14] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:21:15] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:32:31] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-23 14:33:24] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:33:25] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:33:46] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:33:46] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:33:47] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:33:48] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:33:50] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:33:50] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:38:29] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:38:30] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:38:50] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:38:50] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:39:21] [ERROR] [dashboard.data] Error reading master dataset: No columns to parse from file
+[2026-02-23 14:39:21] [ERROR] [dashboard.data] Error reading master dataset: No columns to parse from file
+[2026-02-23 14:40:06] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-23 14:40:10] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:40:11] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:40:20] [INFO] [dashboard.config_manager] Source disabled: https://files.zillowstatic.com/research/public_csvs/zhvi/Metro_zhvi_uc_sfrcondo_
+[2026-02-23 14:40:20] [INFO] [dashboard.settings] Source disabled: https://files.zillowstatic.com/research/public_csvs/zhvi/Metro_zhvi_uc_sfrcondo_
+[2026-02-23 14:40:23] [INFO] [dashboard.config_manager] Source enabled: https://files.zillowstatic.com/research/public_csvs/zhvi/Metro_zhvi_uc_sfrcondo_
+[2026-02-23 14:40:23] [INFO] [dashboard.settings] Source enabled: https://files.zillowstatic.com/research/public_csvs/zhvi/Metro_zhvi_uc_sfrcondo_
+[2026-02-23 14:40:26] [INFO] [dashboard.config_manager] Source disabled: https://files.zillowstatic.com/research/public_csvs/zhvi/Metro_zhvi_uc_sfrcondo_
+[2026-02-23 14:40:26] [INFO] [dashboard.settings] Source disabled: https://files.zillowstatic.com/research/public_csvs/zhvi/Metro_zhvi_uc_sfrcondo_
+[2026-02-23 14:40:27] [INFO] [dashboard.config_manager] Source enabled: https://files.zillowstatic.com/research/public_csvs/zhvi/Metro_zhvi_uc_sfrcondo_
+[2026-02-23 14:40:27] [INFO] [dashboard.settings] Source enabled: https://files.zillowstatic.com/research/public_csvs/zhvi/Metro_zhvi_uc_sfrcondo_
+[2026-02-23 14:40:31] [INFO] [dashboard.config_manager] Source disabled: https://www.nareit.com/data-research/data
+[2026-02-23 14:40:31] [INFO] [dashboard.settings] Source disabled: https://www.nareit.com/data-research/data
+[2026-02-23 14:40:34] [INFO] [dashboard.config_manager] Source enabled: https://www.nareit.com/data-research/data
+[2026-02-23 14:40:34] [INFO] [dashboard.settings] Source enabled: https://www.nareit.com/data-research/data
+[2026-02-23 14:42:26] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-23 14:42:29] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:42:29] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:42:35] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:42:36] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:43:06] [INFO] [dashboard.config_manager] Source disabled: https://files.zillowstatic.com/research/public_csvs/zorf_growth/National_zorf_gr
+[2026-02-23 14:43:06] [INFO] [dashboard.settings] Source disabled: https://files.zillowstatic.com/research/public_csvs/zorf_growth/National_zorf_gr
+[2026-02-23 14:43:07] [INFO] [dashboard.config_manager] Source enabled: https://files.zillowstatic.com/research/public_csvs/zorf_growth/National_zorf_gr
+[2026-02-23 14:43:07] [INFO] [dashboard.settings] Source enabled: https://files.zillowstatic.com/research/public_csvs/zorf_growth/National_zorf_gr
+[2026-02-23 14:43:09] [INFO] [dashboard.config_manager] Source disabled: https://files.zillowstatic.com/research/public_csvs/zhvi/Metro_zhvi_uc_sfrcondo_
+[2026-02-23 14:43:09] [INFO] [dashboard.settings] Source disabled: https://files.zillowstatic.com/research/public_csvs/zhvi/Metro_zhvi_uc_sfrcondo_
+[2026-02-23 14:43:10] [INFO] [dashboard.config_manager] Source enabled: https://files.zillowstatic.com/research/public_csvs/zhvi/Metro_zhvi_uc_sfrcondo_
+[2026-02-23 14:43:10] [INFO] [dashboard.settings] Source enabled: https://files.zillowstatic.com/research/public_csvs/zhvi/Metro_zhvi_uc_sfrcondo_
+[2026-02-23 14:43:56] [INFO] [dashboard.config_manager] Source disabled: https://files.zillowstatic.com/research/public_csvs/new_homeowner_income_needed/
+[2026-02-23 14:43:56] [INFO] [dashboard.settings] Source disabled: https://files.zillowstatic.com/research/public_csvs/new_homeowner_income_needed/
+[2026-02-23 14:43:58] [INFO] [dashboard.config_manager] Source disabled: https://files.zillowstatic.com/research/public_csvs/market_temp_index/Metro_mark
+[2026-02-23 14:43:58] [INFO] [dashboard.settings] Source disabled: https://files.zillowstatic.com/research/public_csvs/market_temp_index/Metro_mark
+[2026-02-23 14:44:02] [INFO] [dashboard.config_manager] Source disabled: https://files.zillowstatic.com/research/public_csvs/sales_count_now/Metro_sales_
+[2026-02-23 14:44:02] [INFO] [dashboard.settings] Source disabled: https://files.zillowstatic.com/research/public_csvs/sales_count_now/Metro_sales_
+[2026-02-23 14:44:03] [INFO] [dashboard.config_manager] Source disabled: https://files.zillowstatic.com/research/public_csvs/mean_doz_pending/Metro_mean_
+[2026-02-23 14:44:03] [INFO] [dashboard.settings] Source disabled: https://files.zillowstatic.com/research/public_csvs/mean_doz_pending/Metro_mean_
+[2026-02-23 14:44:05] [INFO] [dashboard.config_manager] Source disabled: https://files.zillowstatic.com/research/public_csvs/zorf_growth/National_zorf_gr
+[2026-02-23 14:44:05] [INFO] [dashboard.settings] Source disabled: https://files.zillowstatic.com/research/public_csvs/zorf_growth/National_zorf_gr
+[2026-02-23 14:44:06] [INFO] [dashboard.config_manager] Source disabled: https://files.zillowstatic.com/research/public_csvs/zori/Metro_zori_uc_sfrcondom
+[2026-02-23 14:44:06] [INFO] [dashboard.settings] Source disabled: https://files.zillowstatic.com/research/public_csvs/zori/Metro_zori_uc_sfrcondom
+[2026-02-23 14:44:07] [INFO] [dashboard.config_manager] Source disabled: https://files.zillowstatic.com/research/public_csvs/zhvf_growth/Metro_zhvf_growt
+[2026-02-23 14:44:07] [INFO] [dashboard.settings] Source disabled: https://files.zillowstatic.com/research/public_csvs/zhvf_growth/Metro_zhvf_growt
+[2026-02-23 14:44:11] [INFO] [dashboard.config_manager] Source disabled: https://files.zillowstatic.com/research/public_csvs/zhvi/State_zhvi_uc_sfrcondo_
+[2026-02-23 14:44:11] [INFO] [dashboard.settings] Source disabled: https://files.zillowstatic.com/research/public_csvs/zhvi/State_zhvi_uc_sfrcondo_
+[2026-02-23 14:44:15] [INFO] [dashboard.config_manager] Source disabled: https://www.nareit.com/data-research/data
+[2026-02-23 14:44:15] [INFO] [dashboard.settings] Source disabled: https://www.nareit.com/data-research/data
+[2026-02-23 14:44:17] [INFO] [dashboard.config_manager] Source disabled: https://files.zillowstatic.com/research/public_csvs/zhvi/Metro_zhvi_uc_sfrcondo_
+[2026-02-23 14:44:17] [INFO] [dashboard.settings] Source disabled: https://files.zillowstatic.com/research/public_csvs/zhvi/Metro_zhvi_uc_sfrcondo_
+[2026-02-23 14:44:48] [INFO] [dashboard.config_manager] Source disabled: https://files.zillowstatic.com/research/public_csvs/invt_fs/Metro_invt_fs_uc_sfr
+[2026-02-23 14:44:48] [INFO] [dashboard.settings] Source disabled: https://files.zillowstatic.com/research/public_csvs/invt_fs/Metro_invt_fs_uc_sfr
+[2026-02-23 14:44:49] [INFO] [dashboard.config_manager] Source disabled: https://oceanservice.noaa.gov/news/historical-hurricanes/
+[2026-02-23 14:44:49] [INFO] [dashboard.settings] Source disabled: https://oceanservice.noaa.gov/news/historical-hurricanes/
+[2026-02-23 14:44:50] [INFO] [dashboard.config_manager] Source disabled: https://www.ncei.noaa.gov/access/billions/section/events
+[2026-02-23 14:44:50] [INFO] [dashboard.settings] Source disabled: https://www.ncei.noaa.gov/access/billions/section/events
+[2026-02-23 14:50:23] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-23 14:51:50] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:51:50] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:52:15] [INFO] [dashboard.data] Reset all columns to excluded
+[2026-02-23 14:52:17] [INFO] [dashboard.data] Rebuilt master_dataset: 0 rows × 0 cols from 0 datasets
+[2026-02-23 14:55:28] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-23 14:55:31] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 14:55:32] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 15:01:19] [INFO] [dashboard.app] Flask app created (debug=False)
+[2026-02-23 15:01:21] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 15:01:21] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 15:01:36] [ERROR] [dashboard.data] Error reading master dataset: No columns to parse from file
+[2026-02-23 15:01:36] [ERROR] [dashboard.data] Error reading master dataset: No columns to parse from file
+[2026-02-23 15:01:50] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file
+[2026-02-23 15:01:50] [WARNING] [dashboard.charts] Failed to scan master_dataset.csv: No columns to parse from file

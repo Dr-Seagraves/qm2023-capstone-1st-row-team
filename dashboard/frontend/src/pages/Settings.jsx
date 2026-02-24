@@ -84,8 +84,23 @@ function DataSourcesTab({ onToast }) {
   };
   const handleAdd = () => {
     if (!newUrl.trim()) return;
-    saveSources([...sources, { url: newUrl.trim(), label: 'New Source', type: 'other' }]);
+    saveSources([...sources, { url: newUrl.trim(), label: 'New Source', type: 'other', enabled: true }]);
     setNewUrl('');
+  };
+
+  const handleToggle = async (idx) => {
+    const src = sources[idx];
+    const newEnabled = !src.enabled;
+    // Optimistic UI
+    setSources(prev => prev.map((s, i) => i === idx ? { ...s, enabled: newEnabled } : s));
+    try {
+      await apiPut('/api/settings/sources/toggle', { url: src.url, enabled: newEnabled });
+      onToast?.(newEnabled ? `Enabled: ${src.label}` : `Disabled: ${src.label}`, newEnabled ? 'success' : 'info');
+    } catch (e) {
+      // Revert on error
+      setSources(prev => prev.map((s, i) => i === idx ? { ...s, enabled: !newEnabled } : s));
+      onToast?.('Toggle failed: ' + e.message, 'error');
+    }
   };
 
   if (loading) return <div style={{ color: 'var(--text-secondary)' }}>Loading…</div>;
@@ -94,6 +109,9 @@ function DataSourcesTab({ onToast }) {
     <div className="card">
       <div className="card-header">
         <h3>Data Sources ({sources.length})</h3>
+        <span style={{ fontSize: 12, color: 'var(--text-muted)' }}>
+          {sources.filter(s => s.enabled).length} enabled / {sources.filter(s => !s.enabled).length} disabled
+        </span>
       </div>
 
       <table className="data-table">
@@ -103,12 +121,12 @@ function DataSourcesTab({ onToast }) {
             <th>Label</th>
             <th>URL</th>
             <th>Type</th>
-            <th style={{ width: 140 }}>Actions</th>
+            <th style={{ width: 220 }}>Actions</th>
           </tr>
         </thead>
         <tbody>
           {sources.map((src, idx) => (
-            <tr key={idx}>
+            <tr key={idx} style={{ opacity: src.enabled ? 1 : 0.45 }}>
               <td style={{ color: 'var(--text-muted)' }}>{idx + 1}</td>
               <td>{src.label}</td>
               <td>
@@ -131,6 +149,15 @@ function DataSourcesTab({ onToast }) {
                   </div>
                 ) : (
                   <div style={{ display: 'flex', gap: 6 }}>
+                    <button
+                      className="btn btn-sm"
+                      style={src.enabled
+                        ? { background: 'rgba(34,197,94,0.15)', color: 'var(--accent-green)', border: '1px solid rgba(34,197,94,0.3)' }
+                        : { background: 'rgba(255,255,255,0.04)', color: 'var(--text-muted)', border: '1px solid rgba(255,255,255,0.1)' }}
+                      onClick={() => handleToggle(idx)}
+                    >
+                      {src.enabled ? 'Enabled' : 'Disabled'}
+                    </button>
                     <button className="btn btn-secondary btn-sm" onClick={() => handleEdit(idx)}>Edit</button>
                     <button className="btn btn-danger btn-sm" onClick={() => handleDelete(idx)}>Del</button>
                   </div>

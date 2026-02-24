@@ -364,6 +364,20 @@ export default function ColumnConfig({ onToast }) {
   return (
     <div className="col-config">
 
+      {/* ── top actions ── */}
+      <div className="cc-row" style={{ gap: 10 }}>
+        <button className="btn btn-secondary btn-sm" onClick={() => { setLoading(true); loadColumns(); }} disabled={loading}>
+          {loading ? 'Refreshing…' : '↻ Refresh'}
+        </button>
+        <button className="btn btn-secondary btn-sm" onClick={doScan} disabled={scanning}>
+          {scanning ? 'Scanning…' : 'Scan Datasets'}
+        </button>
+        <button className="btn btn-primary btn-sm" onClick={doRebuild} disabled={rebuilding}>
+          {rebuilding ? 'Rebuilding…' : 'Rebuild Master Dataset'}
+        </button>
+        <button className="btn btn-danger btn-sm" onClick={doReset}>Reset All</button>
+      </div>
+
       {/* ── master search bar ── */}
       <div className="cc-row">
         <input
@@ -546,17 +560,6 @@ export default function ColumnConfig({ onToast }) {
             </div>
           );
         })}
-      </div>
-
-      {/* ── bottom actions ── */}
-      <div className="cc-bottom-actions">
-        <button className="btn btn-secondary" onClick={doScan} disabled={scanning}>
-          {scanning ? 'Scanning…' : 'Scan Datasets'}
-        </button>
-        <button className="btn btn-primary" onClick={doRebuild} disabled={rebuilding}>
-          {rebuilding ? 'Rebuilding…' : 'Rebuild Master Dataset'}
-        </button>
-        <button className="btn btn-danger" onClick={doReset}>Reset All</button>
       </div>
     </div>
   );

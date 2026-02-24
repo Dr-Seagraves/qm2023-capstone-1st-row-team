@@ -18250,5 +18250,95 @@
         "include": false
       }
     }
+  },
+  "processed/cleaned_cleaned_florida_hurricane_economic_merged.csv": {
+    "columns": {
+      "event_name": {
+        "include": false
+      },
+      "year": {
+        "include": false
+      },
+      "begin_date": {
+        "include": false
+      },
+      "end_date": {
+        "include": false
+      },
+      "cost_usd_billion_cpi_adjusted": {
+        "include": false
+      },
+      "deaths": {
+        "include": false
+      },
+      "closest_distance_nm": {
+        "include": false
+      },
+      "max_wind_kt": {
+        "include": false
+      },
+      "min_pressure_mb": {
+        "include": false
+      },
+      "storm_id": {
+        "include": false
+      }
+    }
+  },
+  "processed/cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv": {
+    "columns": {
+      "event_name": {
+        "include": false
+      },
+      "begin_date": {
+        "include": false
+      },
+      "end_date": {
+        "include": false
+      },
+      "cost_usd_billion_cpi_adjusted": {
+        "include": false
+      },
+      "deaths": {
+        "include": false
+      },
+      "data_year": {
+        "include": false
+      },
+      "data_disaster": {
+        "include": false
+      },
+      "source_url": {
+        "include": false
+      }
+    }
+  },
+  "processed/cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv": {
+    "columns": {
+      "event_name": {
+        "include": false
+      },
+      "begin_date": {
+        "include": false
+      },
+      "end_date": {
+        "include": false
+      },
+      "cost_usd_billion_cpi_adjusted": {
+        "include": false
+      },
+      "deaths": {
+        "include": false
+      },
+      "data_year": {
+        "include": false
+      },
+      "data_disaster": {
+        "include": false
+      },
+      "source_url": {
+        "include": false
+      }
+    }
   }
 }

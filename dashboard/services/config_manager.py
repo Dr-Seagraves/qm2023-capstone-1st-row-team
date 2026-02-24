@@ -14,6 +14,7 @@ from logging_config import setup_logger
 logger = setup_logger("dashboard.config_manager")
 
 SOURCES_FILE = CONFIG_DIR / "dataset_sources.txt"
+SOURCES_STATE_FILE = CONFIG_DIR / "dataset_sources_state.json"
 COLUMN_CONFIG_FILE = CONFIG_DIR / "column_config.json"
 
 # Auto-labeling patterns for data source URLs
@@ -44,17 +45,60 @@ def _auto_label(url: str) -> tuple[str, str]:
     return "Unknown Source", "other"
 
 
+# ── source enabled/disabled state ────────────────────────────────
+
+def _load_source_state() -> dict:
+    """Load disabled-source state from JSON."""
+    if SOURCES_STATE_FILE.exists():
+        try:
+            return json.loads(SOURCES_STATE_FILE.read_text(encoding="utf-8"))
+        except Exception:
+            return {}
+    return {}
+
+
+def _save_source_state(state: dict) -> None:
+    CONFIG_DIR.mkdir(parents=True, exist_ok=True)
+    with open(SOURCES_STATE_FILE, "w", encoding="utf-8") as fh:
+        json.dump(state, fh, indent=2, ensure_ascii=False)
+
+
+def get_disabled_urls() -> set[str]:
+    """Return the set of URLs currently marked as disabled."""
+    state = _load_source_state()
+    return set(state.get("disabled_urls", []))
+
+
+def set_source_enabled(url: str, enabled: bool) -> None:
+    """Enable or disable a single data source by URL."""
+    state = _load_source_state()
+    disabled = set(state.get("disabled_urls", []))
+    if enabled:
+        disabled.discard(url)
+    else:
+        disabled.add(url)
+    state["disabled_urls"] = sorted(disabled)
+    _save_source_state(state)
+    logger.info("Source %s: %s", "enabled" if enabled else "disabled", url[:80])
+
+
 def get_sources() -> list[dict]:
-    """Read data sources and return annotated list."""
+    """Read data sources and return annotated list (with enabled flag)."""
     if not SOURCES_FILE.exists():
         return []
+    disabled = get_disabled_urls()
     urls = []
     for line in SOURCES_FILE.read_text(encoding="utf-8").splitlines():
         cleaned = line.strip()
         if not cleaned or cleaned.startswith("#"):
             continue
         label, badge = _auto_label(cleaned)
-        urls.append({"url": cleaned, "label": label, "type": badge})
+        urls.append({
+            "url": cleaned,
+            "label": label,
+            "type": badge,
+            "enabled": cleaned not in disabled,
+        })
     return urls
 
 

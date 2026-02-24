@@ -43,15 +43,34 @@ SOURCE_TAGS = {
 
 
 def read_sources_file() -> list[str]:
-    """Read all non-empty, non-comment lines from dataset_sources.txt."""
+    """Read all non-empty, non-comment lines from dataset_sources.txt.
+
+    Lines whose URL appears in the dashboard's disabled-sources list are
+    silently skipped so that ``fetch_all`` won't download them.
+    """
     sources_file = CONFIG_DIR / "dataset_sources.txt"
     if not sources_file.exists():
         logger.error("dataset_sources.txt not found at %s", sources_file)
         return []
+
+    # Load disabled URLs (dashboard feature — graceful if file missing)
+    disabled: set[str] = set()
+    state_file = CONFIG_DIR / "dataset_sources_state.json"
+    if state_file.exists():
+        try:
+            import json as _json
+            _state = _json.loads(state_file.read_text(encoding="utf-8"))
+            disabled = set(_state.get("disabled_urls", []))
+        except Exception:
+            pass
+
     urls: list[str] = []
     for line in sources_file.read_text(encoding="utf-8").splitlines():
         cleaned = line.strip()
         if cleaned and not cleaned.startswith("#"):
+            if cleaned in disabled:
+                logger.info("Skipping disabled source: %s", cleaned[:80])
+                continue
             urls.append(cleaned)
     return urls
 

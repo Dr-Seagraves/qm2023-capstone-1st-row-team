@@ -59,14 +59,68 @@ def _resolve_csv_path(dataset_key: str) -> Path | None:
     return None
 
 
+def _get_disabled_source_filenames() -> set[str]:
+    """Return set of raw base filenames (without extension) from disabled sources.
+
+    Maps each disabled URL → its download filename stem so we can hide the
+    corresponding datasets from the column configuration UI.
+    Processed files often have prefixes (cleaned_, florida_) so we match
+    on whether the dataset filename *contains* the raw stem.
+    """
+    import os
+    from urllib.parse import urlparse
+
+    state_file = CONFIG_DIR / "dataset_sources_state.json"
+    if not state_file.exists():
+        return set()
+    try:
+        state = json.loads(state_file.read_text(encoding="utf-8"))
+    except Exception:
+        return set()
+    disabled_urls = state.get("disabled_urls", [])
+    if not disabled_urls:
+        return set()
+
+    filenames: set[str] = set()
+    for url in disabled_urls:
+        parsed = urlparse(url)
+        name = os.path.basename(parsed.path)
+        if name:
+            # Store the stem (without extension) for substring matching
+            stem = os.path.splitext(name)[0]
+            filenames.add(stem)
+    return filenames
+
+
+def _is_disabled_dataset(filename: str, disabled_stems: set[str]) -> bool:
+    """Check if a dataset filename derives from a disabled source.
+
+    Processed files are typically prefixed with cleaned_ or florida_, so
+    we check if any disabled stem appears as a substring of the filename.
+    """
+    if not disabled_stems:
+        return False
+    name_no_ext = filename.rsplit(".", 1)[0] if "." in filename else filename
+    for stem in disabled_stems:
+        if stem in name_no_ext:
+            return True
+    return False
+
+
 # ── GET /columns — merged column info ────────────────────────────
 
 @bp.route("/columns", methods=["GET"])
 def get_columns():
-    """Return column config merged with data-dictionary metadata."""
+    """Return column config merged with data-dictionary metadata.
+
+    Datasets whose source URL is disabled in the dashboard settings
+    are silently omitted from the response.
+    """
     col_config = _load_json(COLUMN_CONFIG)
     data_dict = _load_json(DATA_DICT)
     dd_datasets = data_dict.get("datasets", {})
+
+    disabled_filenames = _get_disabled_source_filenames()
 
     result = {}
     total_cols = 0
@@ -74,6 +128,12 @@ def get_columns():
 
     # 1. Data-dictionary is the primary catalogue
     for ds_key, ds_info in dd_datasets.items():
+        # Hide datasets from disabled sources
+        parts = ds_key.split("/", 1)
+        filename = parts[1] if len(parts) == 2 else ds_key
+        if _is_disabled_dataset(filename, disabled_filenames):
+            continue
+
         cc_entry = col_config.get(ds_key, {})
         cc_columns = cc_entry.get("columns", {})
 
@@ -97,9 +157,6 @@ def get_columns():
             if include:
                 included_cols += 1
 
-        parts = ds_key.split("/", 1)
-        filename = parts[1] if len(parts) == 2 else ds_key
-
         result[ds_key] = {
             "source_dir": ds_info.get("source_dir", ""),
             "filename": filename,
@@ -109,6 +166,11 @@ def get_columns():
     # 2. Include datasets in column_config but missing from dictionary
     for ds_key, ds_entry in col_config.items():
         if ds_key in result:
+            continue
+        # Hide datasets from disabled sources
+        parts2 = ds_key.split("/", 1)
+        fname2 = parts2[1] if len(parts2) == 2 else ds_key
+        if _is_disabled_dataset(fname2, disabled_filenames):
             continue
         columns = {}
         for col_name, col_info in ds_entry.get("columns", {}).items():
