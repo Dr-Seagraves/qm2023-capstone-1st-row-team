@@ -268,3 +268,243 @@
 [2026-02-25 20:04:53] [INFO] [clean.economic] Economic cleaning complete.
 [2026-02-25 20:04:53] [INFO] [clean.all]   OK: clean_economic.py
 [2026-02-25 20:04:53] [INFO] [clean.all] Clean complete: 3 succeeded, 0 failed
+[2026-02-25 20:39:30] [INFO] [clean.all] ============================================================
+[2026-02-25 20:39:30] [INFO] [clean.all] CLEAN ALL DATA
+[2026-02-25 20:39:30] [INFO] [clean.all] ============================================================
+[2026-02-25 20:39:30] [INFO] [clean.all] Running clean_zillow.py ...
+[2026-02-25 20:39:31] [INFO] [clean.zillow] ============================================================
+[2026-02-25 20:39:31] [INFO] [clean.zillow] CLEAN ZILLOW DATA
+[2026-02-25 20:39:31] [INFO] [clean.zillow] ============================================================
+[2026-02-25 20:39:31] [INFO] [clean.zillow] Found 10 Zillow CSV(s)
+[2026-02-25 20:39:31] [INFO] [clean.zillow] Cleaning Metro_invt_fs_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:39:31] [INFO] [clean.utils]   Data is already in wide format (95 date columns detected)
+[2026-02-25 20:39:31] [INFO] [clean.zillow]   Metro_invt_fs_uc_sfrcondo_sm_month.csv -- rows: 928->928 (-0), nulls remaining: 62 cols
+[2026-02-25 20:39:31] [INFO] [clean.zillow]   Saved → cleaned_Metro_invt_fs_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:39:31] [INFO] [clean.zillow] Cleaning Metro_market_temp_index_uc_sfrcondo_month.csv
+[2026-02-25 20:39:31] [INFO] [clean.utils]   Data is already in wide format (97 date columns detected)
+[2026-02-25 20:39:31] [INFO] [clean.zillow]   Metro_market_temp_index_uc_sfrcondo_month.csv -- rows: 928->923 (-5), nulls remaining: 96 cols
+[2026-02-25 20:39:31] [INFO] [clean.zillow]   Saved → cleaned_Metro_market_temp_index_uc_sfrcondo_month.csv
+[2026-02-25 20:39:31] [INFO] [clean.zillow] Cleaning Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:39:31] [INFO] [clean.utils]   Data is already in wide format (95 date columns detected)
+[2026-02-25 20:39:32] [INFO] [clean.zillow]   Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv -- rows: 676->510 (-166), nulls remaining: 64 cols
+[2026-02-25 20:39:32] [INFO] [clean.zillow]   Saved → cleaned_Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:39:32] [INFO] [clean.zillow] Cleaning Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv
+[2026-02-25 20:39:32] [INFO] [clean.utils]   Data is already in wide format (96 date columns detected)
+[2026-02-25 20:39:32] [INFO] [clean.zillow]   Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv -- rows: 379->309 (-70), nulls remaining: 69 cols
+[2026-02-25 20:39:32] [INFO] [clean.zillow]   Saved → cleaned_Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv
+[2026-02-25 20:39:32] [INFO] [clean.zillow] Cleaning Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:32] [INFO] [clean.utils]   Data is already in wide format (169 date columns detected)
+[2026-02-25 20:39:32] [INFO] [clean.zillow]   Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv -- rows: 390->390 (-0), nulls remaining: 50 cols
+[2026-02-25 20:39:32] [INFO] [clean.zillow]   Saved → cleaned_Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:32] [INFO] [clean.zillow] Cleaning Metro_sales_count_now_uc_sfrcondo_month.csv
+[2026-02-25 20:39:32] [INFO] [clean.utils]   Data is already in wide format (216 date columns detected)
+[2026-02-25 20:39:33] [INFO] [clean.zillow]   Metro_sales_count_now_uc_sfrcondo_month.csv -- rows: 94->94 (-0), nulls remaining: 10 cols
+[2026-02-25 20:39:33] [INFO] [clean.zillow]   Saved → cleaned_Metro_sales_count_now_uc_sfrcondo_month.csv
+[2026-02-25 20:39:33] [INFO] [clean.zillow] Cleaning Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:33] [INFO] [clean.utils]   Data is already in wide format (3 date columns detected)
+[2026-02-25 20:39:33] [INFO] [clean.zillow]   Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv -- rows: 895->895 (-0), nulls remaining: 1 cols
+[2026-02-25 20:39:33] [INFO] [clean.zillow]   Saved → cleaned_Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:33] [INFO] [clean.zillow] Cleaning Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:33] [INFO] [clean.utils]   Data is already in wide format (313 date columns detected)
+[2026-02-25 20:39:33] [INFO] [clean.zillow]   Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv -- rows: 895->859 (-36), nulls remaining: 203 cols
+[2026-02-25 20:39:34] [INFO] [clean.zillow]   Saved → cleaned_Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:34] [INFO] [clean.zillow] Cleaning Metro_zori_uc_sfrcondomfr_sm_month.csv
+[2026-02-25 20:39:34] [INFO] [clean.utils]   Data is already in wide format (133 date columns detected)
+[2026-02-25 20:39:34] [INFO] [clean.zillow]   Metro_zori_uc_sfrcondomfr_sm_month.csv -- rows: 721->353 (-368), nulls remaining: 92 cols
+[2026-02-25 20:39:34] [INFO] [clean.zillow]   Saved → cleaned_Metro_zori_uc_sfrcondomfr_sm_month.csv
+[2026-02-25 20:39:34] [INFO] [clean.zillow] Cleaning State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:34] [INFO] [clean.utils]   Data is already in wide format (313 date columns detected)
+[2026-02-25 20:39:35] [INFO] [clean.zillow]   State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv -- rows: 51->51 (-0), nulls remaining: 111 cols
+[2026-02-25 20:39:35] [INFO] [clean.zillow]   Saved → cleaned_State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:35] [INFO] [clean.zillow] Zillow cleaning complete.
+[2026-02-25 20:39:35] [INFO] [clean.all]   OK: clean_zillow.py
+[2026-02-25 20:39:35] [INFO] [clean.all] Running clean_hurdat2.py ...
+[2026-02-25 20:39:35] [INFO] [clean.hurdat2] ============================================================
+[2026-02-25 20:39:35] [INFO] [clean.hurdat2] CLEAN HURDAT2 DATA
+[2026-02-25 20:39:35] [INFO] [clean.hurdat2] ============================================================
+[2026-02-25 20:39:35] [WARNING] [clean.hurdat2] No HURDAT2 file found in /workspaces/qm2023-capstone-1st-row-team/data/raw
+[2026-02-25 20:39:35] [INFO] [clean.all]   OK: clean_hurdat2.py
+[2026-02-25 20:39:35] [INFO] [clean.all] Running clean_economic.py ...
+[2026-02-25 20:39:36] [INFO] [clean.economic] ============================================================
+[2026-02-25 20:39:36] [INFO] [clean.economic] CLEAN ECONOMIC DATA
+[2026-02-25 20:39:36] [INFO] [clean.economic] ============================================================
+[2026-02-25 20:39:36] [INFO] [clean.economic] Found 12 economic CSV(s)
+[2026-02-25 20:39:36] [INFO] [clean.economic] Cleaning cleaned_cleaned_cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:39:36] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   cleaned_cleaned_cleaned_florida_hurricane_economic_merged.csv — rows: 22→22 (-0)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   Saved → cleaned_cleaned_cleaned_cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:39:36] [INFO] [clean.economic] Cleaning cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:39:36] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv — rows: 67→67 (-0)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   Saved → cleaned_cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:39:36] [INFO] [clean.economic] Cleaning cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:39:36] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv — rows: 22→22 (-0)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   Saved → cleaned_cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:39:36] [INFO] [clean.economic] Cleaning cleaned_cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:39:36] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   cleaned_cleaned_florida_hurricane_economic_merged.csv — rows: 22→22 (-0)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   Saved → cleaned_cleaned_cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:39:36] [INFO] [clean.economic] Cleaning cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:39:36] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv — rows: 67→67 (-0)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   Saved → cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:39:36] [INFO] [clean.economic] Cleaning cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:39:36] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv — rows: 22→22 (-0)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   Saved → cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:39:36] [INFO] [clean.economic] Cleaning cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:39:36] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   cleaned_florida_hurricane_economic_merged.csv — rows: 22→22 (-0)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   Saved → cleaned_cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:39:36] [INFO] [clean.economic] Cleaning cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:39:36] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   cleaned_hurricane_economic_impacts_1980_2024.csv — rows: 67→67 (-0)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   Saved → cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:39:36] [INFO] [clean.economic] Cleaning cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:39:36] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv — rows: 22→22 (-0)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   Saved → cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:39:36] [INFO] [clean.economic] Cleaning florida_hurricane_economic_merged.csv
+[2026-02-25 20:39:36] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   florida_hurricane_economic_merged.csv — rows: 22→22 (-0)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   Saved → cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:39:36] [INFO] [clean.economic] Cleaning hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:39:36] [INFO] [clean.economic]   Parsed dollar column: source_url
+[2026-02-25 20:39:36] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   hurricane_economic_impacts_1980_2024.csv — rows: 69→67 (-2)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   Saved → cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:39:36] [INFO] [clean.economic] Cleaning hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:39:36] [INFO] [clean.economic]   Parsed dollar column: source_url
+[2026-02-25 20:39:36] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   hurricane_economic_impacts_1980_2024_florida_landfall.csv — rows: 22→22 (-0)
+[2026-02-25 20:39:36] [INFO] [clean.economic]   Saved → cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:39:36] [INFO] [clean.economic] Economic cleaning complete.
+[2026-02-25 20:39:36] [INFO] [clean.all]   OK: clean_economic.py
+[2026-02-25 20:39:36] [INFO] [clean.all] Clean complete: 3 succeeded, 0 failed
+[2026-02-25 20:40:28] [INFO] [clean.all] ============================================================
+[2026-02-25 20:40:28] [INFO] [clean.all] CLEAN ALL DATA
+[2026-02-25 20:40:28] [INFO] [clean.all] ============================================================
+[2026-02-25 20:40:28] [INFO] [clean.all] Running clean_zillow.py ...
+[2026-02-25 20:40:29] [INFO] [clean.zillow] ============================================================
+[2026-02-25 20:40:29] [INFO] [clean.zillow] CLEAN ZILLOW DATA
+[2026-02-25 20:40:29] [INFO] [clean.zillow] ============================================================
+[2026-02-25 20:40:29] [INFO] [clean.zillow] Found 10 Zillow CSV(s)
+[2026-02-25 20:40:29] [INFO] [clean.zillow] Cleaning Metro_invt_fs_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:40:29] [INFO] [clean.utils]   Data is already in wide format (95 date columns detected)
+[2026-02-25 20:40:29] [INFO] [clean.zillow]   Metro_invt_fs_uc_sfrcondo_sm_month.csv -- rows: 928->928 (-0), nulls remaining: 62 cols
+[2026-02-25 20:40:29] [INFO] [clean.zillow]   Saved → cleaned_Metro_invt_fs_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:40:29] [INFO] [clean.zillow] Cleaning Metro_market_temp_index_uc_sfrcondo_month.csv
+[2026-02-25 20:40:29] [INFO] [clean.utils]   Data is already in wide format (97 date columns detected)
+[2026-02-25 20:40:29] [INFO] [clean.zillow]   Metro_market_temp_index_uc_sfrcondo_month.csv -- rows: 928->923 (-5), nulls remaining: 96 cols
+[2026-02-25 20:40:29] [INFO] [clean.zillow]   Saved → cleaned_Metro_market_temp_index_uc_sfrcondo_month.csv
+[2026-02-25 20:40:29] [INFO] [clean.zillow] Cleaning Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:40:29] [INFO] [clean.utils]   Data is already in wide format (95 date columns detected)
+[2026-02-25 20:40:29] [INFO] [clean.zillow]   Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv -- rows: 676->510 (-166), nulls remaining: 64 cols
+[2026-02-25 20:40:29] [INFO] [clean.zillow]   Saved → cleaned_Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:40:29] [INFO] [clean.zillow] Cleaning Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv
+[2026-02-25 20:40:29] [INFO] [clean.utils]   Data is already in wide format (96 date columns detected)
+[2026-02-25 20:40:29] [INFO] [clean.zillow]   Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv -- rows: 379->309 (-70), nulls remaining: 69 cols
+[2026-02-25 20:40:30] [INFO] [clean.zillow]   Saved → cleaned_Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv
+[2026-02-25 20:40:30] [INFO] [clean.zillow] Cleaning Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:30] [INFO] [clean.utils]   Data is already in wide format (169 date columns detected)
+[2026-02-25 20:40:30] [INFO] [clean.zillow]   Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv -- rows: 390->390 (-0), nulls remaining: 50 cols
+[2026-02-25 20:40:30] [INFO] [clean.zillow]   Saved → cleaned_Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:30] [INFO] [clean.zillow] Cleaning Metro_sales_count_now_uc_sfrcondo_month.csv
+[2026-02-25 20:40:30] [INFO] [clean.utils]   Data is already in wide format (216 date columns detected)
+[2026-02-25 20:40:30] [INFO] [clean.zillow]   Metro_sales_count_now_uc_sfrcondo_month.csv -- rows: 94->94 (-0), nulls remaining: 10 cols
+[2026-02-25 20:40:30] [INFO] [clean.zillow]   Saved → cleaned_Metro_sales_count_now_uc_sfrcondo_month.csv
+[2026-02-25 20:40:30] [INFO] [clean.zillow] Cleaning Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:30] [INFO] [clean.utils]   Data is already in wide format (3 date columns detected)
+[2026-02-25 20:40:30] [INFO] [clean.zillow]   Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv -- rows: 895->895 (-0), nulls remaining: 1 cols
+[2026-02-25 20:40:30] [INFO] [clean.zillow]   Saved → cleaned_Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:30] [INFO] [clean.zillow] Cleaning Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:31] [INFO] [clean.utils]   Data is already in wide format (313 date columns detected)
+[2026-02-25 20:40:31] [INFO] [clean.zillow]   Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv -- rows: 895->859 (-36), nulls remaining: 203 cols
+[2026-02-25 20:40:31] [INFO] [clean.zillow]   Saved → cleaned_Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:31] [INFO] [clean.zillow] Cleaning Metro_zori_uc_sfrcondomfr_sm_month.csv
+[2026-02-25 20:40:31] [INFO] [clean.utils]   Data is already in wide format (133 date columns detected)
+[2026-02-25 20:40:32] [INFO] [clean.zillow]   Metro_zori_uc_sfrcondomfr_sm_month.csv -- rows: 721->353 (-368), nulls remaining: 92 cols
+[2026-02-25 20:40:32] [INFO] [clean.zillow]   Saved → cleaned_Metro_zori_uc_sfrcondomfr_sm_month.csv
+[2026-02-25 20:40:32] [INFO] [clean.zillow] Cleaning State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:32] [INFO] [clean.utils]   Data is already in wide format (313 date columns detected)
+[2026-02-25 20:40:32] [INFO] [clean.zillow]   State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv -- rows: 51->51 (-0), nulls remaining: 111 cols
+[2026-02-25 20:40:32] [INFO] [clean.zillow]   Saved → cleaned_State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:32] [INFO] [clean.zillow] Zillow cleaning complete.
+[2026-02-25 20:40:32] [INFO] [clean.all]   OK: clean_zillow.py
+[2026-02-25 20:40:32] [INFO] [clean.all] Running clean_hurdat2.py ...
+[2026-02-25 20:40:33] [INFO] [clean.hurdat2] ============================================================
+[2026-02-25 20:40:33] [INFO] [clean.hurdat2] CLEAN HURDAT2 DATA
+[2026-02-25 20:40:33] [INFO] [clean.hurdat2] ============================================================
+[2026-02-25 20:40:33] [WARNING] [clean.hurdat2] No HURDAT2 file found in /workspaces/qm2023-capstone-1st-row-team/data/raw
+[2026-02-25 20:40:33] [INFO] [clean.all]   OK: clean_hurdat2.py
+[2026-02-25 20:40:33] [INFO] [clean.all] Running clean_economic.py ...
+[2026-02-25 20:40:33] [INFO] [clean.economic] ============================================================
+[2026-02-25 20:40:33] [INFO] [clean.economic] CLEAN ECONOMIC DATA
+[2026-02-25 20:40:33] [INFO] [clean.economic] ============================================================
+[2026-02-25 20:40:33] [INFO] [clean.economic] Found 15 economic CSV(s)
+[2026-02-25 20:40:33] [INFO] [clean.economic] Cleaning cleaned_cleaned_cleaned_cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:40:33] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   cleaned_cleaned_cleaned_cleaned_florida_hurricane_economic_merged.csv — rows: 22→22 (-0)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Saved → cleaned_cleaned_cleaned_cleaned_cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic] Cleaning cleaned_cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:40:33] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   cleaned_cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv — rows: 67→67 (-0)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Saved → cleaned_cleaned_cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic] Cleaning cleaned_cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:40:33] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   cleaned_cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv — rows: 22→22 (-0)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Saved → cleaned_cleaned_cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic] Cleaning cleaned_cleaned_cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:40:33] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   cleaned_cleaned_cleaned_florida_hurricane_economic_merged.csv — rows: 22→22 (-0)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Saved → cleaned_cleaned_cleaned_cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic] Cleaning cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:40:33] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv — rows: 67→67 (-0)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Saved → cleaned_cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic] Cleaning cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:40:33] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv — rows: 22→22 (-0)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Saved → cleaned_cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic] Cleaning cleaned_cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:40:33] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   cleaned_cleaned_florida_hurricane_economic_merged.csv — rows: 22→22 (-0)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Saved → cleaned_cleaned_cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic] Cleaning cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:40:33] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv — rows: 67→67 (-0)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Saved → cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic] Cleaning cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:40:33] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv — rows: 22→22 (-0)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Saved → cleaned_cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic] Cleaning cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:40:33] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   cleaned_florida_hurricane_economic_merged.csv — rows: 22→22 (-0)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Saved → cleaned_cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic] Cleaning cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:40:33] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   cleaned_hurricane_economic_impacts_1980_2024.csv — rows: 67→67 (-0)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Saved → cleaned_cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic] Cleaning cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:40:33] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv — rows: 22→22 (-0)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Saved → cleaned_cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic] Cleaning florida_hurricane_economic_merged.csv
+[2026-02-25 20:40:33] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   florida_hurricane_economic_merged.csv — rows: 22→22 (-0)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Saved → cleaned_florida_hurricane_economic_merged.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic] Cleaning hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Parsed dollar column: source_url
+[2026-02-25 20:40:33] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   hurricane_economic_impacts_1980_2024.csv — rows: 69→67 (-2)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Saved → cleaned_hurricane_economic_impacts_1980_2024.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic] Cleaning hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Parsed dollar column: source_url
+[2026-02-25 20:40:33] [INFO] [clean.utils]   Data is already in wide format (0 date columns detected)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   hurricane_economic_impacts_1980_2024_florida_landfall.csv — rows: 22→22 (-0)
+[2026-02-25 20:40:33] [INFO] [clean.economic]   Saved → cleaned_hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:40:33] [INFO] [clean.economic] Economic cleaning complete.
+[2026-02-25 20:40:33] [INFO] [clean.all]   OK: clean_economic.py
+[2026-02-25 20:40:33] [INFO] [clean.all] Clean complete: 3 succeeded, 0 failed

@@ -339,3 +339,11 @@ UnicodeEncodeError: 'charmap' codec can't encode character '\u2713' in position 
 [2026-02-25 20:04:54] [INFO] [filter.florida_landfall] Using HURDAT2 file: https://www.nhc.noaa.gov/data/hurdat/hurdat2-1851-2024-040425.txt
 [2026-02-25 20:04:55] [INFO] [filter.florida_landfall] Found 158 Florida landfall storm/year combinations
 [2026-02-25 20:04:55] [INFO] [filter.florida_landfall] Wrote 22 Florida-landfall rows to /workspaces/qm2023-capstone-1st-row-team/data/processed/hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:39:37] [ERROR] [filter.florida_storms_60nm] Input file not found: /workspaces/qm2023-capstone-1st-row-team/data/raw/hurdat2_raw.txt. Run fetch_noaa_hurdat2.py first.
+[2026-02-25 20:39:37] [INFO] [filter.florida_landfall] Using HURDAT2 file: https://www.nhc.noaa.gov/data/hurdat/hurdat2-1851-2024-040425.txt
+[2026-02-25 20:39:38] [INFO] [filter.florida_landfall] Found 158 Florida landfall storm/year combinations
+[2026-02-25 20:39:38] [INFO] [filter.florida_landfall] Wrote 22 Florida-landfall rows to /workspaces/qm2023-capstone-1st-row-team/data/processed/hurricane_economic_impacts_1980_2024_florida_landfall.csv
+[2026-02-25 20:40:34] [ERROR] [filter.florida_storms_60nm] Input file not found: /workspaces/qm2023-capstone-1st-row-team/data/raw/hurdat2_raw.txt. Run fetch_noaa_hurdat2.py first.
+[2026-02-25 20:40:34] [INFO] [filter.florida_landfall] Using HURDAT2 file: https://www.nhc.noaa.gov/data/hurdat/hurdat2-1851-2024-040425.txt
+[2026-02-25 20:40:35] [INFO] [filter.florida_landfall] Found 158 Florida landfall storm/year combinations
+[2026-02-25 20:40:35] [INFO] [filter.florida_landfall] Wrote 22 Florida-landfall rows to /workspaces/qm2023-capstone-1st-row-team/data/processed/hurricane_economic_impacts_1980_2024_florida_landfall.csv

@@ -17,7 +17,7 @@ def run_step(script_path: Path) -> None:
 
 
 def main() -> None:
-    repo_root = Path(__file__).resolve().parent
+    repo_root = Path(__file__).resolve().parent.parent
     steps = [
         repo_root / "code" / "fetch" / "fetch_all.py",
         repo_root / "code" / "clean" / "clean_all.py",

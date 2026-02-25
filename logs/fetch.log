@@ -1541,3 +1541,199 @@ urllib.error.HTTPError: HTTP Error 404: Not Found
 [2026-02-25 20:04:46] [INFO] [fetch.all] Fetch complete: 11 succeeded, 2 failed
 [2026-02-25 20:04:46] [WARNING] [fetch.all] Failed scripts: fetch_zillow_new_construction.py, fetch_noaa_hurdat2.py
 [2026-02-25 20:04:46] [INFO] [fetch.all] ============================================================
+[2026-02-25 20:39:25] [INFO] [fetch.all] ============================================================
+[2026-02-25 20:39:25] [INFO] [fetch.all] FETCH ALL DATA SOURCES
+[2026-02-25 20:39:25] [INFO] [fetch.all] ============================================================
+[2026-02-25 20:39:25] [INFO] [fetch.all] Running fetch_zillow_zhvi_metro.py ...
+[2026-02-25 20:39:25] [INFO] [fetch.utils] Fetching Zillow Home Value Index (Metro)...
+[2026-02-25 20:39:25] [INFO] [fetch.utils] Already cached: Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:25] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:25] [INFO] [fetch.all]   OK: fetch_zillow_zhvi_metro.py
+[2026-02-25 20:39:25] [INFO] [fetch.all] Running fetch_zillow_zhvi_state.py ...
+[2026-02-25 20:39:25] [INFO] [fetch.utils] Fetching Zillow Home Value Index (State)...
+[2026-02-25 20:39:25] [INFO] [fetch.utils] Already cached: State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:25] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:25] [INFO] [fetch.all]   OK: fetch_zillow_zhvi_state.py
+[2026-02-25 20:39:25] [INFO] [fetch.all] Running fetch_zillow_zhvf_growth.py ...
+[2026-02-25 20:39:25] [INFO] [fetch.utils] Fetching Zillow Home Value Forecast Growth...
+[2026-02-25 20:39:25] [INFO] [fetch.utils] Already cached: Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:25] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:25] [INFO] [fetch.all]   OK: fetch_zillow_zhvf_growth.py
+[2026-02-25 20:39:25] [INFO] [fetch.all] Running fetch_zillow_zori.py ...
+[2026-02-25 20:39:25] [INFO] [fetch.utils] Fetching Zillow Observed Rent Index...
+[2026-02-25 20:39:25] [INFO] [fetch.utils] Already cached: Metro_zori_uc_sfrcondomfr_sm_month.csv
+[2026-02-25 20:39:25] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_zori_uc_sfrcondomfr_sm_month.csv
+[2026-02-25 20:39:25] [INFO] [fetch.all]   OK: fetch_zillow_zori.py
+[2026-02-25 20:39:25] [INFO] [fetch.all] Running fetch_zillow_zorf_growth.py ...
+[2026-02-25 20:39:25] [INFO] [fetch.utils] Fetching Zillow Observed Rent Forecast Growth...
+[2026-02-25 20:39:25] [INFO] [fetch.utils] Already cached: National_zorf_growth_uc_sfr_sm_month.csv
+[2026-02-25 20:39:25] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/National_zorf_growth_uc_sfr_sm_month.csv
+[2026-02-25 20:39:25] [INFO] [fetch.all]   OK: fetch_zillow_zorf_growth.py
+[2026-02-25 20:39:25] [INFO] [fetch.all] Running fetch_zillow_inventory.py ...
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Fetching Zillow For-Sale Inventory...
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Already cached: Metro_invt_fs_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_invt_fs_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:39:26] [INFO] [fetch.all]   OK: fetch_zillow_inventory.py
+[2026-02-25 20:39:26] [INFO] [fetch.all] Running fetch_zillow_sales_count.py ...
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Fetching Zillow Sales Count...
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Already cached: Metro_sales_count_now_uc_sfrcondo_month.csv
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_sales_count_now_uc_sfrcondo_month.csv
+[2026-02-25 20:39:26] [INFO] [fetch.all]   OK: fetch_zillow_sales_count.py
+[2026-02-25 20:39:26] [INFO] [fetch.all] Running fetch_zillow_days_on_market.py ...
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Fetching Zillow Mean Days on Market...
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Already cached: Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:39:26] [INFO] [fetch.all]   OK: fetch_zillow_days_on_market.py
+[2026-02-25 20:39:26] [INFO] [fetch.all] Running fetch_zillow_market_temp.py ...
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Fetching Zillow Market Temperature Index...
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Already cached: Metro_market_temp_index_uc_sfrcondo_month.csv
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_market_temp_index_uc_sfrcondo_month.csv
+[2026-02-25 20:39:26] [INFO] [fetch.all]   OK: fetch_zillow_market_temp.py
+[2026-02-25 20:39:26] [INFO] [fetch.all] Running fetch_zillow_new_construction.py ...
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Fetching Zillow New Construction Sales...
+[2026-02-25 20:39:26] [WARNING] [fetch.utils] No URL matched tag 'zillow_new_construction' (pattern: 'new_con_sales_count_raw/Metro_new_con')
+[2026-02-25 20:39:26] [ERROR] [fetch.utils] Failed to fetch Zillow New Construction Sales
+[2026-02-25 20:39:26] [ERROR] [fetch.all]   FAILED: fetch_zillow_new_construction.py
+
+[2026-02-25 20:39:26] [INFO] [fetch.all] Running fetch_zillow_income_needed.py ...
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Fetching Zillow Income Needed for Homeownership...
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Already cached: Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:26] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:39:26] [INFO] [fetch.all]   OK: fetch_zillow_income_needed.py
+[2026-02-25 20:39:26] [INFO] [fetch.all] Running fetch_noaa_hurdat2.py ...
+[2026-02-25 20:39:26] [INFO] [fetch.noaa_hurdat2] Downloading HURDAT2 from https://www.nhc.noaa.gov/data/hurdat2/hurdat2.txt ...
+[2026-02-25 20:39:27] [ERROR] [fetch.noaa_hurdat2] Failed to download HURDAT2: HTTP Error 404: Not Found
+Traceback (most recent call last):
+  File "/workspaces/qm2023-capstone-1st-row-team/code/fetch/fetch_noaa_hurdat2.py", line 26, in main
+    urlretrieve(HURDAT2_URL, OUTPUT_FILE)
+  File "/usr/local/python/3.12.1/lib/python3.12/urllib/request.py", line 240, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+                            ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+[2026-02-25 20:39:27] [ERROR] [fetch.all]   FAILED: fetch_noaa_hurdat2.py
+
+[2026-02-25 20:39:27] [INFO] [fetch.all] Running fetch_noaa_economic_impacts.py ...
+[2026-02-25 20:39:27] [INFO] [fetch.utils] Fetching NOAA economic impact data...
+[2026-02-25 20:39:27] [INFO] [fetch.utils] Downloading events ...
+[2026-02-25 20:39:30] [INFO] [fetch.utils] Saved: events.html (1253105 bytes)
+[2026-02-25 20:39:30] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/events.html
+[2026-02-25 20:39:30] [INFO] [fetch.all]   OK: fetch_noaa_economic_impacts.py
+[2026-02-25 20:39:30] [INFO] [fetch.all] ============================================================
+[2026-02-25 20:39:30] [INFO] [fetch.all] Fetch complete: 11 succeeded, 2 failed
+[2026-02-25 20:39:30] [WARNING] [fetch.all] Failed scripts: fetch_zillow_new_construction.py, fetch_noaa_hurdat2.py
+[2026-02-25 20:39:30] [INFO] [fetch.all] ============================================================
+[2026-02-25 20:40:23] [INFO] [fetch.all] ============================================================
+[2026-02-25 20:40:23] [INFO] [fetch.all] FETCH ALL DATA SOURCES
+[2026-02-25 20:40:23] [INFO] [fetch.all] ============================================================
+[2026-02-25 20:40:23] [INFO] [fetch.all] Running fetch_zillow_zhvi_metro.py ...
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Fetching Zillow Home Value Index (Metro)...
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Already cached: Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:23] [INFO] [fetch.all]   OK: fetch_zillow_zhvi_metro.py
+[2026-02-25 20:40:23] [INFO] [fetch.all] Running fetch_zillow_zhvi_state.py ...
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Fetching Zillow Home Value Index (State)...
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Already cached: State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:23] [INFO] [fetch.all]   OK: fetch_zillow_zhvi_state.py
+[2026-02-25 20:40:23] [INFO] [fetch.all] Running fetch_zillow_zhvf_growth.py ...
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Fetching Zillow Home Value Forecast Growth...
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Already cached: Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:23] [INFO] [fetch.all]   OK: fetch_zillow_zhvf_growth.py
+[2026-02-25 20:40:23] [INFO] [fetch.all] Running fetch_zillow_zori.py ...
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Fetching Zillow Observed Rent Index...
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Already cached: Metro_zori_uc_sfrcondomfr_sm_month.csv
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_zori_uc_sfrcondomfr_sm_month.csv
+[2026-02-25 20:40:23] [INFO] [fetch.all]   OK: fetch_zillow_zori.py
+[2026-02-25 20:40:23] [INFO] [fetch.all] Running fetch_zillow_zorf_growth.py ...
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Fetching Zillow Observed Rent Forecast Growth...
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Already cached: National_zorf_growth_uc_sfr_sm_month.csv
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/National_zorf_growth_uc_sfr_sm_month.csv
+[2026-02-25 20:40:23] [INFO] [fetch.all]   OK: fetch_zillow_zorf_growth.py
+[2026-02-25 20:40:23] [INFO] [fetch.all] Running fetch_zillow_inventory.py ...
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Fetching Zillow For-Sale Inventory...
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Already cached: Metro_invt_fs_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_invt_fs_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:40:23] [INFO] [fetch.all]   OK: fetch_zillow_inventory.py
+[2026-02-25 20:40:23] [INFO] [fetch.all] Running fetch_zillow_sales_count.py ...
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Fetching Zillow Sales Count...
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Already cached: Metro_sales_count_now_uc_sfrcondo_month.csv
+[2026-02-25 20:40:23] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_sales_count_now_uc_sfrcondo_month.csv
+[2026-02-25 20:40:23] [INFO] [fetch.all]   OK: fetch_zillow_sales_count.py
+[2026-02-25 20:40:23] [INFO] [fetch.all] Running fetch_zillow_days_on_market.py ...
+[2026-02-25 20:40:24] [INFO] [fetch.utils] Fetching Zillow Mean Days on Market...
+[2026-02-25 20:40:24] [INFO] [fetch.utils] Already cached: Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:40:24] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:40:24] [INFO] [fetch.all]   OK: fetch_zillow_days_on_market.py
+[2026-02-25 20:40:24] [INFO] [fetch.all] Running fetch_zillow_market_temp.py ...
+[2026-02-25 20:40:24] [INFO] [fetch.utils] Fetching Zillow Market Temperature Index...
+[2026-02-25 20:40:24] [INFO] [fetch.utils] Already cached: Metro_market_temp_index_uc_sfrcondo_month.csv
+[2026-02-25 20:40:24] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_market_temp_index_uc_sfrcondo_month.csv
+[2026-02-25 20:40:24] [INFO] [fetch.all]   OK: fetch_zillow_market_temp.py
+[2026-02-25 20:40:24] [INFO] [fetch.all] Running fetch_zillow_new_construction.py ...
+[2026-02-25 20:40:24] [INFO] [fetch.utils] Fetching Zillow New Construction Sales...
+[2026-02-25 20:40:24] [WARNING] [fetch.utils] No URL matched tag 'zillow_new_construction' (pattern: 'new_con_sales_count_raw/Metro_new_con')
+[2026-02-25 20:40:24] [ERROR] [fetch.utils] Failed to fetch Zillow New Construction Sales
+[2026-02-25 20:40:24] [ERROR] [fetch.all]   FAILED: fetch_zillow_new_construction.py
+
+[2026-02-25 20:40:24] [INFO] [fetch.all] Running fetch_zillow_income_needed.py ...
+[2026-02-25 20:40:24] [INFO] [fetch.utils] Fetching Zillow Income Needed for Homeownership...
+[2026-02-25 20:40:24] [INFO] [fetch.utils] Already cached: Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:24] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:40:24] [INFO] [fetch.all]   OK: fetch_zillow_income_needed.py
+[2026-02-25 20:40:24] [INFO] [fetch.all] Running fetch_noaa_hurdat2.py ...
+[2026-02-25 20:40:24] [INFO] [fetch.noaa_hurdat2] Downloading HURDAT2 from https://www.nhc.noaa.gov/data/hurdat2/hurdat2.txt ...
+[2026-02-25 20:40:24] [ERROR] [fetch.noaa_hurdat2] Failed to download HURDAT2: HTTP Error 404: Not Found
+Traceback (most recent call last):
+  File "/workspaces/qm2023-capstone-1st-row-team/code/fetch/fetch_noaa_hurdat2.py", line 26, in main
+    urlretrieve(HURDAT2_URL, OUTPUT_FILE)
+  File "/usr/local/python/3.12.1/lib/python3.12/urllib/request.py", line 240, in urlretrieve
+    with contextlib.closing(urlopen(url, data)) as fp:
+                            ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/urllib/request.py", line 215, in urlopen
+    return opener.open(url, data, timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/urllib/request.py", line 521, in open
+    response = meth(req, response)
+               ^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/urllib/request.py", line 630, in http_response
+    response = self.parent.error(
+               ^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/urllib/request.py", line 559, in error
+    return self._call_chain(*args)
+           ^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/urllib/request.py", line 492, in _call_chain
+    result = func(*args)
+             ^^^^^^^^^^^
+  File "/usr/local/python/3.12.1/lib/python3.12/urllib/request.py", line 639, in http_error_default
+    raise HTTPError(req.full_url, code, msg, hdrs, fp)
+urllib.error.HTTPError: HTTP Error 404: Not Found
+[2026-02-25 20:40:24] [ERROR] [fetch.all]   FAILED: fetch_noaa_hurdat2.py
+
+[2026-02-25 20:40:24] [INFO] [fetch.all] Running fetch_noaa_economic_impacts.py ...
+[2026-02-25 20:40:24] [INFO] [fetch.utils] Fetching NOAA economic impact data...
+[2026-02-25 20:40:24] [INFO] [fetch.utils] Downloading events ...
+[2026-02-25 20:40:28] [INFO] [fetch.utils] Saved: events.html (1253105 bytes)
+[2026-02-25 20:40:28] [INFO] [fetch.utils] Success: /workspaces/qm2023-capstone-1st-row-team/data/raw/events.html
+[2026-02-25 20:40:28] [INFO] [fetch.all]   OK: fetch_noaa_economic_impacts.py
+[2026-02-25 20:40:28] [INFO] [fetch.all] ============================================================
+[2026-02-25 20:40:28] [INFO] [fetch.all] Fetch complete: 11 succeeded, 2 failed
+[2026-02-25 20:40:28] [WARNING] [fetch.all] Failed scripts: fetch_zillow_new_construction.py, fetch_noaa_hurdat2.py
+[2026-02-25 20:40:28] [INFO] [fetch.all] ============================================================
