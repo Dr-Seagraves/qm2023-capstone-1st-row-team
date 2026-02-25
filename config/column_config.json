@@ -3,115 +3,115 @@
     "columns": {
       "2018-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-07-31": {
         "dtype": "float",
@@ -383,23 +383,23 @@
       },
       "regionid": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "regionname": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "regiontype": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "sizerank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "statename": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -407,115 +407,115 @@
     "columns": {
       "2018-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-05-31": {
         "dtype": "float",
@@ -795,23 +795,23 @@
       },
       "regionid": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "regionname": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "regiontype": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "sizerank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "statename": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -819,115 +819,115 @@
     "columns": {
       "2018-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-07-31": {
         "dtype": "float",
@@ -1199,23 +1199,23 @@
       },
       "regionid": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "regionname": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "regiontype": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "sizerank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "statename": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -1223,115 +1223,115 @@
     "columns": {
       "2018-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-05-31": {
         "dtype": "float",
@@ -1607,23 +1607,23 @@
       },
       "regionid": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "regionname": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "regiontype": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "sizerank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "statename": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -1631,115 +1631,115 @@
     "columns": {
       "2012-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2014-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2014-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2014-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2014-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2014-05-31": {
         "dtype": "float",
@@ -2307,23 +2307,23 @@
       },
       "regionid": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "regionname": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "regiontype": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "sizerank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "statename": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -2331,115 +2331,115 @@
     "columns": {
       "2008-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-06-30": {
         "dtype": "float",
@@ -3195,23 +3195,23 @@
       },
       "regionid": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "regionname": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "regiontype": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "sizerank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "statename": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -3219,15 +3219,15 @@
     "columns": {
       "2026-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2026-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2027-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "basedate": {
         "dtype": "date",
@@ -3235,23 +3235,23 @@
       },
       "regionid": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "regionname": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "regiontype": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "sizerank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "statename": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -3259,115 +3259,115 @@
     "columns": {
       "2000-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-05-31": {
         "dtype": "float",
@@ -4511,23 +4511,23 @@
       },
       "regionid": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "regionname": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "regiontype": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "sizerank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "statename": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -4535,115 +4535,115 @@
     "columns": {
       "2015-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2017-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2017-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2017-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2017-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2017-05-31": {
         "dtype": "float",
@@ -5067,23 +5067,23 @@
       },
       "regionid": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "regionname": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "regiontype": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "sizerank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "statename": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -5091,115 +5091,115 @@
     "columns": {
       "2000-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-05-31": {
         "dtype": "float",
@@ -6343,23 +6343,23 @@
       },
       "regionid": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "regionname": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "regiontype": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "sizerank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "statename": {
         "dtype": "unknown",
-        "include": false
+        "include": true
       }
     }
   },
@@ -6483,115 +6483,115 @@
     "columns": {
       "2018-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-07-31": {
         "dtype": "float",
@@ -6863,23 +6863,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -6887,115 +6887,115 @@
     "columns": {
       "2018-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-05-31": {
         "dtype": "float",
@@ -7275,23 +7275,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -7299,115 +7299,115 @@
     "columns": {
       "2018-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-07-31": {
         "dtype": "float",
@@ -7679,23 +7679,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -7703,115 +7703,115 @@
     "columns": {
       "2018-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-05-31": {
         "dtype": "float",
@@ -8087,23 +8087,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -8111,115 +8111,115 @@
     "columns": {
       "2012-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2014-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2014-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2014-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2014-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2014-05-31": {
         "dtype": "float",
@@ -8787,23 +8787,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -8811,115 +8811,115 @@
     "columns": {
       "2008-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-06-30": {
         "dtype": "float",
@@ -9675,23 +9675,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -9699,15 +9699,15 @@
     "columns": {
       "2026-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2026-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2027-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "BaseDate": {
         "dtype": "date",
@@ -9715,23 +9715,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -9739,115 +9739,115 @@
     "columns": {
       "2000-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-05-31": {
         "dtype": "float",
@@ -10991,23 +10991,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -11015,115 +11015,115 @@
     "columns": {
       "2015-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2017-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2017-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2017-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2017-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2017-05-31": {
         "dtype": "float",
@@ -11547,23 +11547,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -11855,115 +11855,115 @@
     "columns": {
       "2018-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-07-31": {
         "dtype": "float",
@@ -12235,23 +12235,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -12259,115 +12259,115 @@
     "columns": {
       "2018-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-05-31": {
         "dtype": "float",
@@ -12647,23 +12647,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -12671,115 +12671,115 @@
     "columns": {
       "2018-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-07-31": {
         "dtype": "float",
@@ -13051,23 +13051,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -13075,115 +13075,115 @@
     "columns": {
       "2018-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2018-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2019-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2020-05-31": {
         "dtype": "float",
@@ -13459,23 +13459,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -13483,115 +13483,115 @@
     "columns": {
       "2012-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2012-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2013-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2014-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2014-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2014-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2014-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2014-05-31": {
         "dtype": "float",
@@ -14159,23 +14159,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -14183,115 +14183,115 @@
     "columns": {
       "2008-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2008-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2009-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2010-06-30": {
         "dtype": "float",
@@ -15047,23 +15047,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -15071,15 +15071,15 @@
     "columns": {
       "2026-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2026-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2027-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "BaseDate": {
         "dtype": "date",
@@ -15087,23 +15087,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -15111,115 +15111,115 @@
     "columns": {
       "2000-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-05-31": {
         "dtype": "float",
@@ -16363,23 +16363,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -16387,115 +16387,115 @@
     "columns": {
       "2015-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2015-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2016-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2017-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2017-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2017-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2017-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2017-05-31": {
         "dtype": "float",
@@ -16919,23 +16919,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "string",
-        "include": false
+        "include": true
       }
     }
   },
@@ -16943,15 +16943,15 @@
     "columns": {
       "2026-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2026-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2027-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "BaseDate": {
         "dtype": "date",
@@ -16959,19 +16959,19 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       }
     }
   },
@@ -16979,115 +16979,115 @@
     "columns": {
       "2000-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-02-29": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2000-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-05-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-06-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-07-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-08-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-09-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-10-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-11-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2001-12-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-01-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-02-28": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-03-31": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-04-30": {
         "dtype": "float",
-        "include": false
+        "include": true
       },
       "2002-05-31": {
         "dtype": "float",
@@ -18231,23 +18231,23 @@
       },
       "RegionID": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "RegionName": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "RegionType": {
         "dtype": "string",
-        "include": false
+        "include": true
       },
       "SizeRank": {
         "dtype": "integer",
-        "include": false
+        "include": true
       },
       "StateName": {
         "dtype": "unknown",
-        "include": false
+        "include": true
       }
     }
   }

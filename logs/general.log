@@ -537,3 +537,189 @@
 [2026-02-25 20:40:35] [INFO] [build.master] ==================================================
 [2026-02-25 20:40:35] [INFO] [build.master] master_dataset.csv: 0 rows × 0 cols
 [2026-02-25 20:40:35] [INFO] [build.master] BUILD COMPLETE: /workspaces/qm2023-capstone-1st-row-team/data/final/master_dataset.csv
+[2026-02-25 20:43:59] [INFO] [build.master] ============================================================
+[2026-02-25 20:43:59] [INFO] [build.master] BUILD MASTER DATASET
+[2026-02-25 20:43:59] [INFO] [build.master]   Filter + Merge + Build (automated)
+[2026-02-25 20:43:59] [INFO] [build.master] ============================================================
+[2026-02-25 20:43:59] [INFO] [build.master] [1/4] Filtering Zillow data to Florida MSAs...
+[2026-02-25 20:43:59] [INFO] [build.master]   Filtering Metro_invt_fs_uc_sfrcondo_sm_month.csv → florida_Metro_invt_fs_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:43:59] [INFO] [build.master]     29 Florida MSA rows
+[2026-02-25 20:43:59] [INFO] [build.master]   Filtering Metro_market_temp_index_uc_sfrcondo_month.csv → florida_Metro_market_temp_index_uc_sfrcondo_month.csv
+[2026-02-25 20:43:59] [INFO] [build.master]     29 Florida MSA rows
+[2026-02-25 20:43:59] [INFO] [build.master]   Filtering Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv → florida_Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv
+[2026-02-25 20:43:59] [INFO] [build.master]     25 Florida MSA rows
+[2026-02-25 20:43:59] [INFO] [build.master]   Filtering Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv → florida_Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv
+[2026-02-25 20:43:59] [INFO] [build.master]     26 Florida MSA rows
+[2026-02-25 20:43:59] [INFO] [build.master]   Filtering Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv → florida_Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:43:59] [INFO] [build.master]     22 Florida MSA rows
+[2026-02-25 20:43:59] [INFO] [build.master]   Filtering Metro_sales_count_now_uc_sfrcondo_month.csv → florida_Metro_sales_count_now_uc_sfrcondo_month.csv
+[2026-02-25 20:43:59] [INFO] [build.master]     8 Florida MSA rows
+[2026-02-25 20:43:59] [INFO] [build.master]   Filtering Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv → florida_Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:43:59] [INFO] [build.master]     29 Florida MSA rows
+[2026-02-25 20:43:59] [INFO] [build.master]   Filtering Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv → florida_Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:43:59] [INFO] [build.master]     29 Florida MSA rows
+[2026-02-25 20:43:59] [INFO] [build.master]   Filtering Metro_zori_uc_sfrcondomfr_sm_month.csv → florida_Metro_zori_uc_sfrcondomfr_sm_month.csv
+[2026-02-25 20:43:59] [INFO] [build.master]     26 Florida MSA rows
+[2026-02-25 20:43:59] [INFO] [build.master]   9 Zillow files ready
+[2026-02-25 20:43:59] [INFO] [build.master] [2/4] Running hurricane filters...
+[2026-02-25 20:43:59] [INFO] [build.master]   Running filter_florida_storms_60nm.py ...
+[2026-02-25 20:44:00] [ERROR] [build.master]   FAILED filter_florida_storms_60nm.py: 
+[2026-02-25 20:44:00] [INFO] [build.master]   Running filter_florida_landfall_hurricanes.py ...
+[2026-02-25 20:44:01] [INFO] [build.master] [3/4] Running specialized merges...
+[2026-02-25 20:44:01] [INFO] [build.master]   Running merge_hurricane_economic.py ...
+[2026-02-25 20:44:01] [INFO] [build.master]   Running merge_zillow_metrics.py ...
+[2026-02-25 20:44:02] [INFO] [build.master] [4/4] Building master_dataset.csv (included columns only)...
+[2026-02-25 20:44:02] [INFO] [build.master]   No included columns — master_dataset.csv will be empty
+[2026-02-25 20:44:02] [INFO] [build.master] ==================================================
+[2026-02-25 20:44:02] [INFO] [build.master] master_dataset.csv: 0 rows × 0 cols
+[2026-02-25 20:44:02] [INFO] [build.master] BUILD COMPLETE: /workspaces/qm2023-capstone-1st-row-team/data/final/master_dataset.csv
+[2026-02-25 20:47:07] [INFO] [build.master] ============================================================
+[2026-02-25 20:47:07] [INFO] [build.master] BUILD MASTER DATASET
+[2026-02-25 20:47:07] [INFO] [build.master]   Filter + Merge + Build (automated)
+[2026-02-25 20:47:07] [INFO] [build.master] ============================================================
+[2026-02-25 20:47:07] [INFO] [build.master] [1/4] Filtering Zillow data to Florida MSAs...
+[2026-02-25 20:47:07] [INFO] [build.master]   9 Zillow files ready
+[2026-02-25 20:47:07] [INFO] [build.master] [2/4] Running hurricane filters...
+[2026-02-25 20:47:07] [INFO] [build.master] [3/4] Running specialized merges...
+[2026-02-25 20:47:07] [INFO] [build.master]   Running merge_hurricane_economic.py ...
+[2026-02-25 20:47:07] [INFO] [build.master]   Running merge_zillow_metrics.py ...
+[2026-02-25 20:47:07] [INFO] [build.master] [4/4] Building master_dataset.csv (included columns only)...
+[2026-02-25 20:47:07] [INFO] [build.master]   Loading cleaned_Metro_invt_fs_uc_sfrcondo_sm_month.csv (33 included cols)
+[2026-02-25 20:47:07] [INFO] [build.master]     928 rows × 34 cols
+[2026-02-25 20:47:07] [INFO] [build.master]   Loading cleaned_Metro_market_temp_index_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:47:07] [INFO] [build.master]     923 rows × 34 cols
+[2026-02-25 20:47:07] [INFO] [build.master]   Loading cleaned_Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv (33 included cols)
+[2026-02-25 20:47:07] [INFO] [build.master]     510 rows × 34 cols
+[2026-02-25 20:47:07] [INFO] [build.master]   Loading cleaned_Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:47:07] [INFO] [build.master]     309 rows × 34 cols
+[2026-02-25 20:47:07] [INFO] [build.master]   Loading cleaned_Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:47:07] [INFO] [build.master]     390 rows × 34 cols
+[2026-02-25 20:47:07] [INFO] [build.master]   Loading cleaned_Metro_sales_count_now_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:47:07] [INFO] [build.master]     94 rows × 34 cols
+[2026-02-25 20:47:07] [INFO] [build.master]   Loading cleaned_Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (8 included cols)
+[2026-02-25 20:47:07] [INFO] [build.master]     895 rows × 9 cols
+[2026-02-25 20:47:07] [INFO] [build.master]   Loading cleaned_Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:47:07] [INFO] [build.master]     859 rows × 34 cols
+[2026-02-25 20:47:07] [INFO] [build.master]   Loading cleaned_Metro_zori_uc_sfrcondomfr_sm_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     353 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading cleaned_State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     51 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading florida_Metro_invt_fs_uc_sfrcondo_sm_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     29 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading florida_Metro_market_temp_index_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     29 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading florida_Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     25 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading florida_Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     26 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading florida_Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     22 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading florida_Metro_sales_count_now_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     8 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading florida_Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (8 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     29 rows × 9 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading florida_Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     29 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading florida_Metro_zori_uc_sfrcondomfr_sm_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     26 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading Metro_invt_fs_uc_sfrcondo_sm_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     928 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading Metro_market_temp_index_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     928 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     676 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     379 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     390 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading Metro_sales_count_now_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     94 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (8 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     895 rows × 9 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     895 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading Metro_zori_uc_sfrcondomfr_sm_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     721 rows × 34 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading National_zorf_growth_uc_sfr_sm_month.csv (7 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     1 rows × 8 cols
+[2026-02-25 20:47:08] [INFO] [build.master]   Loading State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:47:08] [INFO] [build.master]     51 rows × 34 cols
+[2026-02-25 20:47:09] [INFO] [build.master] ==================================================
+[2026-02-25 20:47:09] [INFO] [build.master] master_dataset.csv: 11493 rows × 156 cols
+[2026-02-25 20:47:09] [INFO] [build.master] Source datasets: cleaned_Metro_invt_fs_uc_sfrcondo_sm_month.csv, cleaned_Metro_market_temp_index_uc_sfrcondo_month.csv, cleaned_Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv, cleaned_Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv, cleaned_Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, cleaned_Metro_sales_count_now_uc_sfrcondo_month.csv, cleaned_Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, cleaned_Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, cleaned_Metro_zori_uc_sfrcondomfr_sm_month.csv, cleaned_State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, florida_Metro_invt_fs_uc_sfrcondo_sm_month.csv, florida_Metro_market_temp_index_uc_sfrcondo_month.csv, florida_Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv, florida_Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv, florida_Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, florida_Metro_sales_count_now_uc_sfrcondo_month.csv, florida_Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, florida_Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, florida_Metro_zori_uc_sfrcondomfr_sm_month.csv, Metro_invt_fs_uc_sfrcondo_sm_month.csv, Metro_market_temp_index_uc_sfrcondo_month.csv, Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv, Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv, Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, Metro_sales_count_now_uc_sfrcondo_month.csv, Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, Metro_zori_uc_sfrcondomfr_sm_month.csv, National_zorf_growth_uc_sfr_sm_month.csv, State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:47:09] [INFO] [build.master] BUILD COMPLETE: /workspaces/qm2023-capstone-1st-row-team/data/final/master_dataset.csv
+[2026-02-25 20:48:07] [INFO] [build.master] ============================================================
+[2026-02-25 20:48:07] [INFO] [build.master] BUILD MASTER DATASET
+[2026-02-25 20:48:07] [INFO] [build.master]   Filter + Merge + Build (automated)
+[2026-02-25 20:48:07] [INFO] [build.master] ============================================================
+[2026-02-25 20:48:07] [INFO] [build.master] [1/4] Filtering Zillow data to Florida MSAs...
+[2026-02-25 20:48:07] [INFO] [build.master]   9 Zillow files ready
+[2026-02-25 20:48:07] [INFO] [build.master] [2/4] Running hurricane filters...
+[2026-02-25 20:48:07] [INFO] [build.master] [3/4] Running specialized merges...
+[2026-02-25 20:48:07] [INFO] [build.master]   Running merge_hurricane_economic.py ...
+[2026-02-25 20:48:07] [INFO] [build.master]   Running merge_zillow_metrics.py ...
+[2026-02-25 20:48:08] [INFO] [build.master] [4/4] Building master_dataset.csv (included columns only)...
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading cleaned_Metro_invt_fs_uc_sfrcondo_sm_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     928 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading cleaned_Metro_market_temp_index_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     923 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading cleaned_Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     510 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading cleaned_Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     309 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading cleaned_Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     390 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading cleaned_Metro_sales_count_now_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     94 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading cleaned_Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (8 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     895 rows × 9 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading cleaned_Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     859 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading cleaned_Metro_zori_uc_sfrcondomfr_sm_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     353 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading cleaned_State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     51 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading florida_Metro_invt_fs_uc_sfrcondo_sm_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     29 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading florida_Metro_market_temp_index_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     29 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading florida_Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     25 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading florida_Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     26 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading florida_Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     22 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading florida_Metro_sales_count_now_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     8 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading florida_Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (8 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     29 rows × 9 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading florida_Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     29 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading florida_Metro_zori_uc_sfrcondomfr_sm_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     26 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading Metro_invt_fs_uc_sfrcondo_sm_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     928 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading Metro_market_temp_index_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     928 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     676 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     379 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     390 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading Metro_sales_count_now_uc_sfrcondo_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     94 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (8 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     895 rows × 9 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     895 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading Metro_zori_uc_sfrcondomfr_sm_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     721 rows × 34 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading National_zorf_growth_uc_sfr_sm_month.csv (7 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     1 rows × 8 cols
+[2026-02-25 20:48:08] [INFO] [build.master]   Loading State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv (33 included cols)
+[2026-02-25 20:48:08] [INFO] [build.master]     51 rows × 34 cols
+[2026-02-25 20:48:09] [INFO] [build.master] ==================================================
+[2026-02-25 20:48:09] [INFO] [build.master] master_dataset.csv: 11493 rows × 156 cols
+[2026-02-25 20:48:09] [INFO] [build.master] Source datasets: cleaned_Metro_invt_fs_uc_sfrcondo_sm_month.csv, cleaned_Metro_market_temp_index_uc_sfrcondo_month.csv, cleaned_Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv, cleaned_Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv, cleaned_Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, cleaned_Metro_sales_count_now_uc_sfrcondo_month.csv, cleaned_Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, cleaned_Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, cleaned_Metro_zori_uc_sfrcondomfr_sm_month.csv, cleaned_State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, florida_Metro_invt_fs_uc_sfrcondo_sm_month.csv, florida_Metro_market_temp_index_uc_sfrcondo_month.csv, florida_Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv, florida_Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv, florida_Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, florida_Metro_sales_count_now_uc_sfrcondo_month.csv, florida_Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, florida_Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, florida_Metro_zori_uc_sfrcondomfr_sm_month.csv, Metro_invt_fs_uc_sfrcondo_sm_month.csv, Metro_market_temp_index_uc_sfrcondo_month.csv, Metro_mean_doz_pending_uc_sfrcondo_sm_month.csv, Metro_new_con_sales_count_raw_uc_sfrcondo_month.csv, Metro_new_homeowner_income_needed_downpayment_0.20_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, Metro_sales_count_now_uc_sfrcondo_month.csv, Metro_zhvf_growth_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, Metro_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv, Metro_zori_uc_sfrcondomfr_sm_month.csv, National_zorf_growth_uc_sfr_sm_month.csv, State_zhvi_uc_sfrcondo_tier_0.33_0.67_sm_sa_month.csv
+[2026-02-25 20:48:09] [INFO] [build.master] BUILD COMPLETE: /workspaces/qm2023-capstone-1st-row-team/data/final/master_dataset.csv

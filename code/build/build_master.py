@@ -90,8 +90,8 @@ def run_filter_scripts() -> None:
 
     filter_dir = Path(__file__).resolve().parent.parent / "filter"
     scripts = [
-        "filter_florida_storms_60nm.py",
-        "filter_florida_landfall_hurricanes.py",
+        # "filter_florida_storms_60nm.py",  # Requires HURDAT2 data (URL unavailable)
+        # "filter_florida_landfall_hurricanes.py",  # Requires HURDAT2 data
     ]
 
     for script_name in scripts:

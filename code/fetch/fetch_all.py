@@ -25,9 +25,9 @@ FETCH_SCRIPTS = [
     "fetch_zillow_sales_count.py",
     "fetch_zillow_days_on_market.py",
     "fetch_zillow_market_temp.py",
-    "fetch_zillow_new_construction.py",
+    # "fetch_zillow_new_construction.py",  # URL not available
     "fetch_zillow_income_needed.py",
-    "fetch_noaa_hurdat2.py",
+    # "fetch_noaa_hurdat2.py",  # URL returns 404
     "fetch_noaa_economic_impacts.py",
 ]
 
