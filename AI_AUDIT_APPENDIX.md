@@ -62,3 +62,11 @@
   - **Our corrections/actions:** Edited all outputs to make sure they were correct
 
 ## Summary
+
+Total AI use: AI tools (GitHub Copilot, Claude Opus 4.6) were used for 5 tasks during pipeline development.
+
+Primary use cases: Data import code generation, dashboard creation (later removed in favor of a single-script pipeline), documentation drafting, data dictionary generation, and data quality report structure.
+
+Verification method: All AI-generated code was manually reviewed, tested by running the pipeline end-to-end, and outputs confirmed with instructor feedback.
+
+Responsibility: All code is tested and our responsibility.

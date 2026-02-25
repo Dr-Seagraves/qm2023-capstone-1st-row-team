@@ -1,226 +1,184 @@
-# Data Quality Report
+# Milestone 1: Data Quality Report
 
-Prepared: 2026-02-23
-
-## 1) Scope and Purpose
-
-This report documents data quality for the Florida hurricane and housing market pipeline in this repository, including:
-
-- Data sources (primary and supplementary)
-- Cleaning and filtering decisions with before/after counts
-- Merge strategy and verification checks
-- Final dataset and sample statistics
-- Reproducibility checklist
-- Ethical considerations and data-loss implications
+**Team:** 1st Row Team
+**Members:** Nevaeh Marquez, Logan Ledbetter, Raleigh Elizabeth Wullkotte, Sam Bronner
+**Date:** 2026-02-20
+**Dataset:** Housing — Florida Hurricane Exposure & Housing Market
 
 ---
 
-## 2) Data Sources
+## 1. Data Sources
 
-### Primary Sources
+### Primary: Zillow Research Housing Indicators
 
-1. **NOAA/NHC HURDAT2 hurricane tracks**  
-   - URL registry: [config/dataset_sources.txt](config/dataset_sources.txt)  
-   - Fetch script: [code/fetch/fetch_noaa_hurdat2.py](code/fetch/fetch_noaa_hurdat2.py)  
-   - Raw file target: `data/raw/hurdat2_raw.txt`
+- **Source:** Zillow Research public CSV downloads ([zillowstatic.com](https://files.zillowstatic.com/research/public_csvs/))
+- **Coverage:** 29 Florida MSAs, monthly frequency, date range varies by metric (2000–2027)
+- **Initial row count:** 5,527 rows across 8 Metro-level CSV files (before Florida filter); 197 Florida MSA rows
+- **Key variables:** ZHVI (home values), ZORI (rents), Inventory, Sales_Count, Days_on_Market, Market_Temp, Income_Needed, ZHVF_Growth
 
-2. **NOAA Billion-Dollar Disaster / Economic Impacts**  
-   - URL registry: [config/dataset_sources.txt](config/dataset_sources.txt)  
-   - Fetch script: [code/fetch/fetch_noaa_economic_impacts.py](code/fetch/fetch_noaa_economic_impacts.py)  
-   - Typical processed inputs: `hurricane_economic_impacts_1980_2024.csv`
+### Supplementary: NOAA/NHC HURDAT2 Hurricane Tracks
 
-3. **Zillow Research housing datasets (metro/state time series)**  
-   - URL registry: [config/dataset_sources.txt](config/dataset_sources.txt)  
-   - Fetch orchestration: [code/fetch/fetch_all.py](code/fetch/fetch_all.py)  
-   - Examples: ZHVI, ZORI, inventory, market temperature, sales count, income needed
+- **Source:** [NHC HURDAT2](https://www.nhc.noaa.gov/data/hurdat/hurdat2-1851-2024-040425.txt) (auto-detected; filename changes with each NHC release)
+- **Variables:** storm_id, storm_name, date, lat, lon, max_wind (kt), min_pressure (mb), record_type
+- **Date range:** 1851–2024 (55,230 total track points; filtered to 2000–2025 for Florida-proximity storms → 12 storms)
 
-### Supplementary / Supporting Sources
+### Supplementary: NOAA NCEI Billion-Dollar Disasters
 
-- Florida state boundary GeoJSON used to validate in-state hurricane landfalls in [code/filter/filter_florida_landfall_hurricanes.py](code/filter/filter_florida_landfall_hurricanes.py)
-- NOAA/NHC index parsing for latest HURDAT2 reference file in [code/filter/filter_florida_landfall_hurricanes.py](code/filter/filter_florida_landfall_hurricanes.py)
-- Optional `shapely` usage fallback for geospatial point-in-polygon checks in [code/filter/filter_florida_landfall_hurricanes.py](code/filter/filter_florida_landfall_hurricanes.py)
+- **Source:** [NOAA NCEI API](https://www.ncei.noaa.gov/access/billions/events-US-1980-2024.json?disasters[]=tropical-cyclone)
+- **Variables:** event_name, begin_date, end_date, cost_usd_billion_cpi_adjusted, deaths
+- **Date range:** 1980–2024 (67 total events, $1,543.0B total CPI-adjusted cost); 7 events matched to Florida-proximity storms
 
 ---
 
-## 3) Cleaning and Filtering Decisions
+## 2. Data Cleaning Decisions
 
-### A) Zillow scope restriction to Florida MSAs
+### Per-variable cleaning summary
 
-Rule (in [code/build/build_master.py](code/build/build_master.py)): keep rows where `StateName == "FL"` and `RegionType == "msa"`.
+| Variable | % Missing | Count | Decision | Justification |
+|----------|-----------|-------|----------|---------------|
+| ZHVI (home values) | 1.0% | 90 / 8,822 | Keep nulls (metric-level) | Coverage varies by MSA; dropping would lose entire metros |
+| ZORI (rents) | 66.6% | 5,875 / 8,822 | Keep nulls | ZORI series starts later (~2015); not available for all metros early on |
+| Inventory | 68.8% | 6,070 / 8,822 | Keep nulls | Coverage begins mid-2018 for most metros |
+| Sales_Count | 80.4% | 7,094 / 8,822 | Keep nulls | Coverage begins late-2019 |
+| Days_on_Market | 75.0% | 6,619 / 8,822 | Keep nulls | Coverage begins mid-2018 |
+| Market_Temp | 68.2% | 6,021 / 8,822 | Keep nulls | Coverage begins mid-2018 |
+| Income_Needed | 57.9% | 5,104 / 8,822 | Keep nulls | Coverage begins late-2017 |
+| ZHVF_Growth | 99.0% | 8,735 / 8,822 | Keep nulls | Forecast metric with minimal historical coverage |
+| Metro (entity key) | 0% | 0 | — | Non-null for all rows |
+| Date (time key) | 0% | 0 | — | Parsed to datetime; unparseable dates dropped |
 
-Observed impact across 9 Metro Zillow raw files:
+### Cleaning actions applied
 
-- **Before:** 5,906 rows
-- **After:** 223 rows
-- **Dropped:** 5,683 rows (**96.23%**)
-
-Interpretation: this is an intentional geographic-focus filter, not random data loss.
-
-### B) HURDAT2 hurricane proximity filter
-
-Rule (in [code/filter/filter_florida_storms_60nm.py](code/filter/filter_florida_storms_60nm.py)):
-
-- Great-circle distance from Florida reference point (27.5, -82.0)
-- Keep storms with at least one point within 60 NM
-- Restrict years to 2004–2025
-- Keep full track records for selected storms within the year range
-
-Observed outputs:
-
-- `florida_storms_60nm_2004_2025.csv`: 5 rows, 11 columns
-- `florida_storms_60nm_summary.csv`: 1 row, 6 columns
-
-### C) Economic impact landfall filter
-
-Rule (in [code/filter/filter_florida_landfall_hurricanes.py](code/filter/filter_florida_landfall_hurricanes.py)):
-
-- Keep only events named Hurricane/Tropical Storm
-- Match event name + year against HURDAT2 records with record identifier `L` (landfall)
-- Confirm landfall location falls within Florida geometry
-
-Observed impact:
-
-- **Before:** 69 rows (`hurricane_economic_impacts_1980_2024.csv`)
-- **After:** 22 rows (`hurricane_economic_impacts_1980_2024_florida_landfall.csv`)
-- **Dropped:** 47 rows (**68.12%**)
-
-### D) Generic cleaning transforms
-
-From [code/clean/clean_utils.py](code/clean/clean_utils.py), [code/clean/clean_zillow.py](code/clean/clean_zillow.py), [code/clean/clean_economic.py](code/clean/clean_economic.py), [code/clean/clean_hurdat2.py](code/clean/clean_hurdat2.py):
-
-- Standardize column names (lowercase/underscores)
-- Drop highly empty rows (`threshold=0.6` Zillow, `0.5` economic)
-- Parse numeric/date-like object fields
-- Convert dollar strings (`$`, million, billion) to numeric
-- Replace sentinel missing values in HURDAT2 (`-99`, `-999`)
-- Preserve/ensure wide format for Zillow-style time series
-
-Selected before/after examples from `cleaned_*` files:
-
-- `Metro_mean_doz_pending...`: 676 → 510 (−166)
-- `Metro_zori...`: 721 → 353 (−368)
-- `Metro_zhvi...`: 895 → 859 (−36)
-- `hurricane_economic_impacts_1980_2024.csv`: 69 → 67 (−2)
-
-### Economic justification for cleaning choices
-
-- **Geographic targeting (Florida-only)** improves internal validity for the stated research question (Florida hurricane exposure vs Florida housing metrics).
-- **Landfall and proximity filters** reduce measurement error by excluding storms unlikely to affect Florida real estate fundamentals.
-- **Dollar normalization** is necessary for interpretable cost comparisons and downstream model scaling.
-- **Dropping highly incomplete rows** avoids spurious inference from records without sufficient economic or market signal.
+| Decision | Dataset | Rule | Justification |
+|----------|---------|------|---------------|
+| **Geographic filter** | Zillow | Keep only `StateName == "FL"` and `RegionType == "msa"` | Focus analysis on Florida MSAs per research question |
+| **All-null rows** | Zillow panel | Drop rows where every metric column is NaN | No usable data in those observations |
+| **Outlier winsorization** | Zillow metrics | Clip at 1st/99th percentile | Cap extreme values while preserving trends; appropriate for housing data |
+| **Duplicates** | Zillow panel | `drop_duplicates(subset=["Metro", "Date"], keep="first")` | Ensure one row per entity-time |
+| **Date parsing** | Zillow | `pd.to_datetime()` on date columns | Ensure consistent YYYY-MM-DD format for merge alignment |
+| **Sentinel values** | HURDAT2 | Replace -999, -99 with NaN | Standard HURDAT2 missing value sentinels |
+| **Storm proximity filter** | HURDAT2 tracks | Keep storms within 60 NM of Florida center (27.5°N, 82.0°W), years 2000–2025 | Capture storms with potential Florida market impact |
+| **Hurricane-year fill** | Merged panel | Fill years with no storm activity → hurricane columns = 0 | Zero is the correct value (no exposure), not missing |
 
 ---
 
-## 4) Merge Strategy and Verification
+## 3. Merge Strategy
 
-### Implemented strategies
+### Join details
 
-1. **Economic + storm-track merge (keyed enrichment)**  
-   Script: [code/merge/merge_hurricane_economic.py](code/merge/merge_hurricane_economic.py)  
-   Keying logic: `(storm_name_upper, year)` extracted from `event_name` + `data_year`
+1. **Zillow metric consolidation:**
+   - All 8 Zillow Metro CSV files pivot from wide to long format, then combine into a single panel on keys `(Metro, Date)`.
+   - Join type: outer union across metrics — each metric contributes its own date coverage.
+   - Result: one row per Metro × Date with columns for each housing metric.
 
-2. **Zillow metric consolidation (wide metric union by Metro/Date)**  
-   Script: [code/merge/merge_zillow_metrics.py](code/merge/merge_zillow_metrics.py)  
-   Output rows represent `Metro × Date`; metric columns are aligned from multiple Zillow files.
+2. **Hurricane track + economic impact merge:**
+   - Join type: inner join on `(storm_name_upper, year)`.
+   - Alignment: NOAA NCEI event names parsed to extract storm name; matched against HURDAT2 storm names.
+   - Result: Florida-proximity storms enriched with CPI-adjusted cost and death toll data.
 
-3. **Master dataset assembly (config-driven concatenation)**  
-   Scripts: [code/merge/merge_all.py](code/merge/merge_all.py), [code/build/build_master.py](code/build/build_master.py)  
-   Method: vertical concatenation of enabled datasets with source tagging (`_source_dataset`)
+3. **Zillow panel + annual hurricane summary:**
+   - Annual hurricane summary aggregated from Florida-proximity storms (count, max wind, min pressure, closest distance, total cost, total deaths).
+   - Join type: left join on `year` (extracted from Date).
+   - Non-hurricane years receive zero-fill.
+   - Before/after row counts: identical (left join preserves all Zillow rows).
 
-### Verification checks (current outputs)
+### Row count verification
 
-- `florida_hurricane_economic_merged.csv`: 22 rows, 10 columns
-- Track-match coverage within that file:
-  - Matched rows with non-null `closest_distance_nm`: **1**
-  - Unmatched rows: **21**
-- `florida_zillow_metrics_monthly.csv`: 9,164 rows, 13 columns
-  - Unique metros: 29
-  - Unique dates: 316
-
-Assessment: merge mechanics run successfully, but keyed storm-track enrichment currently has low match yield; this should be treated as a documented data-quality risk for inferential analysis.
+- Zillow rows before merge = Zillow rows after merge (asserted in script).
+- No accidental duplication: annual hurricane summary has exactly one row per year.
 
 ---
 
-## 5) Final Dataset Summary and Sample Statistics
+## 4. Final Dataset Summary
 
-### Current final artifact status
+- **Output file:** `data/final/housing_analysis_panel.csv`
+- **Entity variable:** `Metro` (Florida MSA name, e.g., "Tampa-St. Petersburg-Clearwater, FL")
+- **Time variable:** `Date` (monthly, YYYY-MM-DD format)
+- **Panel type:** Unbalanced (coverage varies by metric and metro)
+- **Entities:** 29 Florida MSAs
+- **Time periods:** 316 months (2000-01-31 to 2027-01-31)
+- **Observations:** 8,822 rows (one row per Metro × Date)
 
-- [data/final/master_dataset.csv](data/final/master_dataset.csv) is currently empty (0 rows, 0 columns).
-- Reason: the build path is configured to write an empty master dataset when no columns are marked `include: true` in column configuration (see [code/build/build_master.py](code/build/build_master.py)).
+### Sample statistics
 
-### Sample statistics from analysis-ready merged outputs
+| Variable | Mean | Std Dev | Min | Max | Missing (%) |
+|----------|------|---------|-----|-----|-------------|
+| ZHVI | 198,930.51 | 102,109.39 | 69,606.48 | 604,985.26 | 1.0% |
+| ZORI | 1,517.15 | 480.09 | 868.88 | 3,432.46 | 66.6% |
+| Inventory | 5,041.64 | 8,684.40 | 40.00 | 53,168.84 | 68.8% |
+| Sales_Count | 3,109.05 | 2,653.31 | 552.43 | 11,856.06 | 80.4% |
+| Days_on_Market | 62.47 | 28.36 | 16.00 | 156.94 | 75.0% |
+| Market_Temp | 47.85 | 19.50 | -13.00 | 133.00 | 68.2% |
+| Income_Needed | 60,113.62 | 28,362.24 | 22,852.92 | 146,233.85 | 57.9% |
+| ZHVF_Growth | 0.46 | 0.88 | -0.97 | 3.96 | 99.0% |
+| hurricane_count | 0.45 | 0.80 | 0 | 3 | 0% |
+| hurricane_max_wind_kt | 30.94 | 53.26 | 0 | 155 | 0% |
+| hurricane_min_pressure_mb | 285.81 | 436.88 | 0 | 997 | 0% |
+| hurricane_closest_nm | 9.87 | 16.83 | 0 | 56.60 | 0% |
+| hurricane_total_cost_billion | 10.74 | 28.00 | 0 | 120.71 | 0% |
+| hurricane_total_deaths | 15.50 | 40.15 | 0 | 157 | 0% |
 
-#### A) `florida_hurricane_economic_merged.csv` (22 rows)
+*Note:* High missing percentages for some Zillow metrics reflect differing start dates of each time series (e.g., ZORI begins ~2015, Inventory ~2018), not data quality failures. ZHVF_Growth (99% missing) is a forecast metric with minimal historical data and may be excluded from M3 analysis. All statistics above are exact outputs from the pipeline run.
 
-- `cost_usd_billion_cpi_adjusted`: mean 32.55, median 12.00, min 1.10, max 201.30 (n=22)
-- `deaths`: mean 42.81, median 28.00, min 1, max 219 (n=21)
-- Storm-track numeric coverage fields (`closest_distance_nm`, `max_wind_kt`, `min_pressure_mb`) each currently have n=1 non-null
+### Data quality flags
 
-#### B) `florida_zillow_metrics_monthly.csv` (9,164 rows)
-
-- `ZHVI`: mean 201,065.34, median 170,746.55, min 53,538.83, max 1,001,787.94 (n=8,732)
-- `ZORI`: mean 1,517.75, median 1,429.64, min 811.42, max 3,619.60 (n=2,947)
-- `Inventory`: mean 5,068.74, median 2,283.50, min 23, max 59,411 (n=2,752)
-- `Sales_Count`: mean 3,124.31, median 2,072.00, min 401, max 16,225 (n=1,728)
-- `Days_on_Market`: mean 62.76, median 60, min 12, max 258 (n=2,203)
-- `Market_Temp`: mean 47.97, median 46, min -37, max 193 (n=2,801)
-- `Income_Needed`: mean 60,226.82, median 51,378.30, min 19,757.87, max 172,873.87 (n=3,718)
-
----
-
-## 6) Reproducibility Checklist
-
-Use this sequence on a clean environment:
-
-1. Install Python dependencies: `python -m pip install -r requirements.txt`
-2. Fetch all sources: `python code/fetch/fetch_all.py`
-3. Run cleaning: `python code/clean/clean_all.py`
-4. Run filters: `python code/filter/filter_all.py`
-5. Run merges:
-   - `python code/merge/merge_hurricane_economic.py`
-   - `python code/merge/merge_zillow_metrics.py`
-6. Build final master: `python code/build/build_master.py`
-7. Verify outputs exist in:
-   - `data/processed/` (intermediate + merged tables)
-   - `data/final/master_dataset.csv`
-8. Record code and config state:
-   - Git commit hash
-   - [config/merge_config.json](config/merge_config.json)
-   - [config/column_config.json](config/column_config.json)
-   - [config/dataset_sources.txt](config/dataset_sources.txt)
-
-Optional dashboard launch for manual QA: `python start.py`
+- Unbalanced panel: different metrics have different date coverage across MSAs.
+- Hurricane columns are zero-filled for non-storm years (not null).
+- Hurricane-economic merge relies on exact name matching; some HURDAT2 storm names may differ from NOAA NCEI event names.
 
 ---
 
-## 7) Ethical Considerations: What Data Are We Losing?
+## 5. Reproducibility Checklist
 
-1. **Geographic exclusion bias**  
-   Florida-only filtering removes non-Florida comparators, which limits external validity and can amplify region-specific confounders.
+- [x] Script (`capstone_data_pipeline.py`) runs without errors from top to bottom
+- [x] Uses relative paths only (no hardcoded `C:\Users\...` or `/home/...`)
+- [x] Output location: `data/final/housing_analysis_panel.csv` and `data/final/housing_metadata.json`
+- [x] No manual editing required — script alone produces all outputs
+- [x] Metadata JSON saved with dataset summary and cleaning decisions
+- [x] AI Audit Appendix (`AI_AUDIT_APPENDIX.md`) complete
 
-2. **Event-selection bias**  
-   Restricting to Florida landfalls (or 60 NM proximity) excludes near-miss storms that may still influence insurance expectations, migration, or market sentiment.
+### Reproduction steps
 
-3. **Temporal scope narrowing**  
-   Year filters (e.g., 2004–2025 for proximity output) can suppress long-run baseline variation and understate cyclical effects.
+```
+pip install -r requirements.txt
+python capstone_data_pipeline.py
+```
 
-4. **Missingness-induced attrition**  
-   Threshold-based row dropping disproportionately removes sparse records, which may represent smaller or less-monitored markets.
-
-5. **Name/year matching limitations in merge**  
-   Low match coverage in storm-track enrichment (1/22) indicates potential under-linkage; this can bias estimated relationships toward zero or unstable coefficients.
-
-### Mitigation recommendations
-
-- Maintain an "exclusion ledger" (rows dropped by rule, by dataset).
-- Report matched vs unmatched rates for each merge in every model run.
-- Run sensitivity analyses with broader storm definitions (e.g., larger distance radius, near-miss categories).
-- Preserve untouched snapshots of raw and minimally transformed data for auditability.
+Outputs will appear in `data/final/`. Source data is auto-fetched and cached in `data/raw/`.
 
 ---
 
-## 8) Immediate Action Items
+## 6. Ethical Considerations
 
-1. Improve storm name normalization and fuzzy matching in economic-track merge to raise match yield above current 1/22.
-2. Decide/lock `include: true` columns so `master_dataset.csv` is populated.
-3. Add automated quality checks (row-count assertions + key uniqueness tests) after each pipeline stage.
+### What data are we losing?
+
+1. **Geographic exclusion bias:**
+   Florida-only filtering removes non-Florida comparators, limiting external validity. Acceptable for our research focus on Florida hurricane exposure; alternative-state comparisons can be explored in M3 robustness checks.
+
+2. **Event-selection bias:**
+   The 60 NM proximity filter excludes near-miss storms that may still influence insurance expectations, migration, or market sentiment. By using a proximity threshold rather than landfall-only, we partially mitigate this.
+
+3. **Temporal scope narrowing:**
+   Year filters (2000–2025 for storm proximity) suppress long-run baseline variation. Our Zillow data begins around 2000 anyway, so this has minimal practical impact.
+
+4. **Metric coverage gaps:**
+   High missing percentages for some metrics (e.g., Sales_Count at 80.4%, ZHVF_Growth at 99.0%) occur because those Zillow series start later or have limited coverage. We preserve these as NaN rather than dropping or imputing, which avoids fabricating data but limits early-period analysis. We will test alternatives in M3 robustness.
+
+5. **Name-matching limitations:**
+   Hurricane-economic merge uses exact name matching. Storm names that differ between HURDAT2 and NOAA NCEI (e.g., abbreviations, historical naming conventions) may be missed. This under-linkage could bias hurricane cost associations toward zero.
+
+### Mitigation
+
+- Preserve raw data snapshots for auditability.
+- Report matched vs. unmatched rates in pipeline output.
+- Run sensitivity analyses with broader storm definitions in M3.
+- Document all exclusions with counts in cleaning logs.
+
+---
+
+## Sign-off
+
+- **Nevaeh Marquez**
+- **Logan Ledbetter**
+- **Raleigh Elizabeth Wullkotte**
+- **Sam Bronner**
