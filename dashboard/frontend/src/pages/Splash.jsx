@@ -145,7 +145,7 @@ export default function Splash() {
       <canvas ref={canvasRef} className="splash-canvas" />
 
       <div className="splash-overlay">
-        <div className="splash-badge">QM 2023 CAPSTONE</div>
+        <div className="splash-badge">QM 2026 CAPSTONE</div>
         <h1 className="splash-title">Hurricane Impact</h1>
         <h2 className="splash-subtitle-line">on Florida Real Estate</h2>
         <p className="splash-subtitle">
