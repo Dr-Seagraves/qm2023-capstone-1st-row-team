@@ -9,7 +9,6 @@ Semester-long capstone for Statistics II: Data Analytics.
 > Update role titles as needed for your final submission.
 
 - **Nevaeh Marquez** — Data acquisition and preprocessing
-- **Cayman Seagraves** — Methods oversight and merge validation
 - **Logan-TU** — Pipeline/dashboard engineering and integration
 - **Raleigh Elizabeth Wullkotte** — Documentation, QA, and reporting
 - **sbronner13** — Supplementary analysis support
