@@ -260,7 +260,7 @@ for filename, metric_name in ZILLOW_FILE_METRIC.items():
         loaded_metrics.append(metric_name)
         print(f"  {metric_name}: {file_total} total rows, {file_florida} Florida MSA rows")
 
-# Build a long-format DataFrame: Metro | Date | metric1 | metric2 | ...
+# Build a strict long-format DataFrame: Metro | Date | metric | value
 sorted_dates = sorted(all_dates)
 sorted_metrics = sorted(loaded_metrics)
 
@@ -270,20 +270,24 @@ for metro in sorted(metro_data.keys()):
         metrics = metro_data[metro].get(date_str, {})
         # Only include rows where at least one metric has a value
         if metrics:
-            row = {"Metro": metro, "Date": date_str}
             for m in sorted_metrics:
-                row[m] = metrics.get(m, np.nan)
-            panel_rows.append(row)
+                if m in metrics:
+                    panel_rows.append({
+                        "Metro": metro,
+                        "Date": date_str,
+                        "metric": m,
+                        "value": metrics[m],
+                    })
 
 zillow_panel = pd.DataFrame(panel_rows)
 
 print(f"\nZillow primary dataset loaded:")
 print(f"  Total rows across all files: {zillow_initial_rows}")
 print(f"  Florida MSA rows: {zillow_florida_rows}")
-print(f"  Panel shape (Metro × Date): {zillow_panel.shape}")
+print(f"  Long rows (Metro × Date × metric): {zillow_panel.shape}")
 print(f"  Unique metros: {zillow_panel['Metro'].nunique()}")
 print(f"  Date range: {zillow_panel['Date'].min()} to {zillow_panel['Date'].max()}")
-print(f"  Metrics: {sorted_metrics}")
+print(f"  Metrics loaded: {sorted_metrics}")
 print(f"\nFirst 5 rows:")
 print(zillow_panel.head().to_string())
 print(f"\nColumn info:")
@@ -319,34 +323,32 @@ if date_nulls > 0:
     print(f"  Dropping {date_nulls} rows with unparseable dates")
     zillow_panel = zillow_panel.dropna(subset=["Date"])
 
-# 3d. Drop rows where ALL metric columns are NaN (no useful data)
-metric_cols = [c for c in zillow_panel.columns if c not in ("Metro", "Date")]
-all_null_mask = zillow_panel[metric_cols].isnull().all(axis=1)
-n_all_null = all_null_mask.sum()
-if n_all_null > 0:
-    print(f"  Dropping {n_all_null} rows where all metrics are null")
-    zillow_panel = zillow_panel[~all_null_mask]
+# 3d. Drop rows with missing value in long schema
+n_null_value = zillow_panel["value"].isnull().sum()
+if n_null_value > 0:
+    print(f"  Dropping {n_null_value} rows with null value")
+    zillow_panel = zillow_panel.dropna(subset=["value"])
 
-# 3e. Handle duplicates: one row per Metro × Date
-n_dupes = zillow_panel.duplicated(subset=["Metro", "Date"], keep="first").sum()
+# 3e. Handle duplicates: one row per Metro × Date × metric
+n_dupes = zillow_panel.duplicated(subset=["Metro", "Date", "metric"], keep="first").sum()
 if n_dupes > 0:
-    print(f"  Dropping {n_dupes} duplicate Metro×Date rows (keeping first)")
-    zillow_panel = zillow_panel.drop_duplicates(subset=["Metro", "Date"], keep="first")
+    print(f"  Dropping {n_dupes} duplicate Metro×Date×metric rows (keeping first)")
+    zillow_panel = zillow_panel.drop_duplicates(subset=["Metro", "Date", "metric"], keep="first")
 
 # 3f. Outlier treatment — winsorize continuous metrics at 1st/99th percentile
 #     This caps extreme values while preserving trends. Appropriate for housing
 #     market data where extreme outliers may reflect data errors or edge cases.
 print("\n--- Outlier treatment (winsorize 1st/99th percentile) ---")
-for col in metric_cols:
-    series = zillow_panel[col].dropna()
+for metric_name, idx in zillow_panel.groupby("metric").groups.items():
+    series = zillow_panel.loc[idx, "value"].dropna()
     if len(series) < 10:
         continue
     p01 = series.quantile(0.01)
     p99 = series.quantile(0.99)
     n_clipped = ((series < p01) | (series > p99)).sum()
     if n_clipped > 0:
-        zillow_panel[col] = zillow_panel[col].clip(lower=p01, upper=p99)
-        print(f"  {col}: clipped {n_clipped} values to [{p01:.2f}, {p99:.2f}]")
+        zillow_panel.loc[idx, "value"] = zillow_panel.loc[idx, "value"].clip(lower=p01, upper=p99)
+        print(f"  {metric_name}: clipped {n_clipped} values to [{p01:.2f}, {p99:.2f}]")
 
 # 3g. Document AFTER cleaning
 n_after_clean = len(zillow_panel)
@@ -432,9 +434,22 @@ if not florida_storms_df.empty:
     print(f"\n  Storm summary:")
     print(florida_storms_df.to_string(index=False))
 
-# Save filtered storm data to processed/
-florida_storms_df.to_csv(PROCESSED_DATA_DIR / "florida_storms_60nm_2000_2025.csv", index=False)
-print(f"\n  Saved: data/processed/florida_storms_60nm_2000_2025.csv")
+# Save filtered storm data to processed/ in long format
+storm_id_cols = ["storm_id", "storm_name", "year"]
+storm_value_cols = [c for c in florida_storms_df.columns if c not in storm_id_cols]
+florida_storms_long = florida_storms_df.melt(
+    id_vars=storm_id_cols,
+    value_vars=storm_value_cols,
+    var_name="metric",
+    value_name="value",
+)
+storms_long_path = PROCESSED_DATA_DIR / "florida_storms_60nm_2000_2025_long.csv"
+storms_legacy_path = PROCESSED_DATA_DIR / "florida_storms_60nm_2000_2025.csv"
+florida_storms_long.to_csv(storms_long_path, index=False)
+# Keep legacy filename for backward compatibility; file content is long-format.
+florida_storms_long.to_csv(storms_legacy_path, index=False)
+print(f"\n  Saved: data/processed/florida_storms_60nm_2000_2025_long.csv")
+print(f"  Saved: data/processed/florida_storms_60nm_2000_2025.csv (legacy long-format alias)")
 
 # 4c. Fetch NOAA economic impact data (tropical cyclone events)
 print("\n--- Fetching NOAA Billion-Dollar Disaster economic data (tropical cyclones) ---")
@@ -522,10 +537,23 @@ else:
 
 # Save merged hurricane-economic data to processed/
 if not hurricane_econ.empty:
-    hurricane_econ.to_csv(PROCESSED_DATA_DIR / "florida_hurricane_economic_merged.csv", index=False)
-    print(f"  Saved: data/processed/florida_hurricane_economic_merged.csv")
+    hurricane_id_cols = ["event_name", "year", "begin_date", "end_date"]
+    hurricane_value_cols = [c for c in hurricane_econ.columns if c not in hurricane_id_cols]
+    hurricane_econ_long = hurricane_econ.melt(
+        id_vars=hurricane_id_cols,
+        value_vars=hurricane_value_cols,
+        var_name="metric",
+        value_name="value",
+    )
+    hurricane_long_path = PROCESSED_DATA_DIR / "florida_hurricane_economic_merged_long.csv"
+    hurricane_legacy_path = PROCESSED_DATA_DIR / "florida_hurricane_economic_merged.csv"
+    hurricane_econ_long.to_csv(hurricane_long_path, index=False)
+    # Keep legacy filename for backward compatibility; file content is long-format.
+    hurricane_econ_long.to_csv(hurricane_legacy_path, index=False)
+    print(f"  Saved: data/processed/florida_hurricane_economic_merged_long.csv")
+    print(f"  Saved: data/processed/florida_hurricane_economic_merged.csv (legacy long-format alias)")
     print(f"\n  Merged hurricane-economic data:")
-    print(hurricane_econ.to_string(index=False))
+    print(hurricane_econ_long.head(20).to_string(index=False))
 
 
 # =============================================================================
@@ -536,9 +564,9 @@ print("\n" + "=" * 70)
 print("SECTION 5: Merge Primary (Zillow) + Supplementary (Hurricane) Data")
 print("=" * 70)
 
-# The Zillow panel is Metro × Month. Hurricane events occur at the year level.
-# Strategy: create annual hurricane summary (per year), then left join onto
-# the Zillow panel by year. Years with no hurricane activity get zeros.
+# The Zillow data is in strict long format (Metro × Month × metric).
+# Hurricane/economic signals are year-level, so we create year-level long rows
+# and expand them to each Metro × Month via year matching.
 
 # 5a. Create annual hurricane summary for Florida
 print("\n--- Building annual hurricane summary ---")
@@ -570,27 +598,60 @@ if not hurricane_econ.empty and "year" in hurricane_econ.columns:
     annual_hurricane["hurricane_total_cost_billion"] = annual_hurricane["hurricane_total_cost_billion"].fillna(0)
     annual_hurricane["hurricane_total_deaths"] = annual_hurricane["hurricane_total_deaths"].fillna(0).astype(int)
 
-# 5c. Extract year from Zillow Date for merge key
+# 5c. Build Metro × Month key table and attach year
+panel_keys = zillow_panel[["Metro", "Date"]].drop_duplicates().copy()
+
+# Option 1 (balanced panel): keep only dates shared by all metros.
+# This enforces equal time observations per entity for panel methods.
+common_dates = (
+    panel_keys.groupby("Date")["Metro"]
+    .nunique()
+    .loc[lambda s: s == panel_keys["Metro"].nunique()]
+    .index
+)
+panel_keys = panel_keys[panel_keys["Date"].isin(common_dates)].copy()
+zillow_panel = zillow_panel[zillow_panel["Date"].isin(common_dates)].copy()
+
+print(f"  Balanced date support: {len(common_dates)} months shared by all metros")
+if len(common_dates) > 0:
+    print(f"  Balanced date range: {min(common_dates).date()} to {max(common_dates).date()}")
+
+panel_keys["hurricane_year"] = panel_keys["Date"].dt.year
+
+# 5d. Convert annual hurricane/econ summaries to long metric/value rows
+hurricane_metric_cols = [c for c in annual_hurricane.columns if c != "hurricane_year"]
+annual_hurricane_long = annual_hurricane.melt(
+    id_vars=["hurricane_year"],
+    value_vars=hurricane_metric_cols,
+    var_name="metric",
+    value_name="value",
+)
+
+# 5e. Expand year-level hurricane metrics to each Metro × Month row.
+# Build a complete year×metric scaffold first so missing years still retain
+# explicit metric names with zero values.
+year_metric_scaffold = pd.MultiIndex.from_product(
+    [sorted(panel_keys["hurricane_year"].unique()), hurricane_metric_cols],
+    names=["hurricane_year", "metric"],
+).to_frame(index=False)
+year_metric_values = year_metric_scaffold.merge(
+    annual_hurricane_long,
+    on=["hurricane_year", "metric"],
+    how="left",
+)
+year_metric_values["value"] = year_metric_values["value"].fillna(0)
+
+hurricane_long = panel_keys.merge(year_metric_values, on="hurricane_year", how="left")
+hurricane_long = hurricane_long[["Metro", "Date", "metric", "value"]]
+
+# 5f. Combine housing long data + hurricane long data
 n_before_merge = len(zillow_panel)
-zillow_panel["hurricane_year"] = zillow_panel["Date"].dt.year
-
-# 5d. Left join: Zillow panel (Metro × Month) + annual hurricane summary
-merged = zillow_panel.merge(annual_hurricane, on="hurricane_year", how="left")
-
-# 5e. Fill years with no hurricane activity → zeros
-hurricane_fill_cols = [c for c in merged.columns if c.startswith("hurricane_") and c != "hurricane_year"]
-for col in hurricane_fill_cols:
-    merged[col] = merged[col].fillna(0)
-
-# Drop the merge key (year is derivable from Date)
-merged = merged.drop(columns=["hurricane_year"])
-
+merged = pd.concat([zillow_panel[["Metro", "Date", "metric", "value"]], hurricane_long], ignore_index=True)
 n_after_merge = len(merged)
 print(f"\n--- Merge verification ---")
-print(f"  Zillow rows before merge:  {n_before_merge}")
-print(f"  Merged rows after merge:   {n_after_merge}")
-assert n_after_merge == n_before_merge, f"Row count mismatch! {n_after_merge} != {n_before_merge}"
-print(f"  ✓ Row count preserved (no duplication)")
+print(f"  Zillow long rows before merge:  {n_before_merge}")
+print(f"  Combined long rows after merge: {n_after_merge}")
+print(f"  Added hurricane/economic rows:  {n_after_merge - n_before_merge}")
 
 
 # =============================================================================
@@ -601,7 +662,7 @@ print("\n" + "=" * 70)
 print("SECTION 6: Reshape to Panel Structure (Entity × Time)")
 print("=" * 70)
 
-# The data is already in long format (one row per Metro × Date) from Section 2.
+# The data is in strict long format (one row per Metro × Date × metric).
 # Verify panel structure and document dimensions.
 
 panel = merged.copy()
@@ -625,7 +686,9 @@ panel = panel.sort_values([entity_var, time_var]).reset_index(drop=True)
 n_entities = panel[entity_var].nunique()
 n_periods = panel[time_var].nunique()
 n_obs = len(panel)
-obs_per_entity = panel.groupby(entity_var)[time_var].count()
+entity_time = panel[[entity_var, time_var]].drop_duplicates()
+obs_per_entity = entity_time.groupby(entity_var)[time_var].count()
+obs_per_entity_metric = panel.groupby([entity_var, "metric"])[time_var].count()
 balanced = "balanced" if obs_per_entity.min() == obs_per_entity.max() else "unbalanced"
 
 print(f"\n--- Panel structure ---")
@@ -636,13 +699,14 @@ print(f"  Entities:        {n_entities}")
 print(f"  Time periods:    {n_periods}")
 print(f"  Observations:    {n_obs}")
 print(f"  Obs per entity:  min={obs_per_entity.min()}, max={obs_per_entity.max()}")
+print(f"  Metrics:         {panel['metric'].nunique()}")
+print(f"  Obs per entity×metric: min={obs_per_entity_metric.min()}, max={obs_per_entity_metric.max()}")
 
 # 6f. Sample statistics
 print(f"\n--- Sample statistics ---")
-numeric_cols = panel.select_dtypes(include=[np.number]).columns.tolist()
-stats = panel[numeric_cols].agg(["mean", "std", "min", "max"]).T
-stats["missing_n"] = panel[numeric_cols].isnull().sum()
-stats["missing_pct"] = (100 * panel[numeric_cols].isnull().mean()).round(1)
+stats = panel.groupby("metric")["value"].agg(["mean", "std", "min", "max"])
+stats["missing_n"] = panel.groupby("metric")["value"].apply(lambda s: s.isnull().sum())
+stats["missing_pct"] = panel.groupby("metric")["value"].apply(lambda s: round(100 * s.isnull().mean(), 1))
 stats = stats.rename(columns={"mean": "Mean", "std": "Std", "min": "Min", "max": "Max",
                                 "missing_n": "Missing (N)", "missing_pct": "Missing (%)"})
 print(stats.to_string())
@@ -656,11 +720,16 @@ print("\n" + "=" * 70)
 print("SECTION 7: Save Tidy Output and Metadata")
 print("=" * 70)
 
-# 7a. Save analysis panel CSV
-output_csv = FINAL_DATA_DIR / "housing_analysis_panel.csv"
+# 7a. Save strict long-format master dataset CSV
+output_csv = FINAL_DATA_DIR / "housing_master_dataset_long.csv"
 panel.to_csv(output_csv, index=False, encoding="utf-8")
 print(f"\n  ✓ Saved: {output_csv.relative_to(PROJECT_ROOT)}")
 print(f"    {n_obs} rows × {len(panel.columns)} columns")
+
+# Keep legacy filename for backward compatibility, but now in long format.
+legacy_output_csv = FINAL_DATA_DIR / "housing_analysis_panel.csv"
+panel.to_csv(legacy_output_csv, index=False, encoding="utf-8")
+print(f"  ✓ Saved: {legacy_output_csv.relative_to(PROJECT_ROOT)} (long format)")
 
 # 7b. Build and save metadata JSON
 metadata = {
@@ -676,6 +745,11 @@ metadata = {
     "n_obs": int(n_obs),
     "time_range": f"{panel[time_var].min()} to {panel[time_var].max()}",
     "variables": list(panel.columns),
+    "schema": "long",
+    "long_schema": {
+        "id_columns": ["Metro", "Date", "metric"],
+        "value_column": "value",
+    },
     "primary_sources": {
         "zillow": {
             "description": "Zillow Research metro-level housing indicators",
@@ -692,9 +766,9 @@ metadata = {
         },
     },
     "cleaning_decisions": {
-        "missing_metrics": "Rows where all metric columns are null are dropped. Individual metric nulls are preserved (unbalanced coverage across metrics).",
-        "outliers": "Continuous housing metrics winsorized at 1st/99th percentiles to cap extreme values.",
-        "duplicates": "Duplicate Metro×Date rows dropped, keeping first occurrence.",
+        "missing_metrics": "Rows with null values in long schema are dropped.",
+        "outliers": "Metric-specific values winsorized at 1st/99th percentiles in long format.",
+        "duplicates": "Duplicate Metro×Date×metric rows dropped, keeping first occurrence.",
         "hurricane_fill": "Years with no Florida-proximity hurricane activity filled with zeros for hurricane columns.",
         "geographic_filter": "Zillow data filtered to Florida MSAs only (StateName='FL', RegionType='msa').",
         "storm_proximity_filter": f"HURDAT2 tracks filtered to storms within {FL_PROXIMITY_NM} NM of Florida center ({FL_CENTER_LAT}°N, {abs(FL_CENTER_LON)}°W), years 2000–2025.",
@@ -706,12 +780,127 @@ with open(output_json, "w", encoding="utf-8") as f:
     json.dump(metadata, f, indent=2, default=str)
 print(f"  ✓ Saved: {output_json.relative_to(PROJECT_ROOT)}")
 
-# 7c. Final confirmation
+# 7c. Save long-form data dictionary
+data_dictionary_rows = [
+    {
+        "dataset": "housing_master_dataset_long",
+        "column_name": "Metro",
+        "data_type": "string",
+        "role": "identifier",
+        "description": "Florida metropolitan statistical area name.",
+    },
+    {
+        "dataset": "housing_master_dataset_long",
+        "column_name": "Date",
+        "data_type": "date (YYYY-MM-DD)",
+        "role": "time",
+        "description": "Monthly observation date.",
+    },
+    {
+        "dataset": "housing_master_dataset_long",
+        "column_name": "metric",
+        "data_type": "string",
+        "role": "measure name",
+        "description": "Metric label (housing or hurricane/economic indicator).",
+    },
+    {
+        "dataset": "housing_master_dataset_long",
+        "column_name": "value",
+        "data_type": "numeric",
+        "role": "measure value",
+        "description": "Observed value for the metric at Metro and Date.",
+    },
+    {
+        "dataset": "florida_hurricane_economic_merged_long",
+        "column_name": "event_name",
+        "data_type": "string",
+        "role": "identifier",
+        "description": "NOAA tropical cyclone event label.",
+    },
+    {
+        "dataset": "florida_hurricane_economic_merged_long",
+        "column_name": "year",
+        "data_type": "integer",
+        "role": "time",
+        "description": "Calendar year of the hurricane event.",
+    },
+    {
+        "dataset": "florida_hurricane_economic_merged_long",
+        "column_name": "begin_date",
+        "data_type": "string (YYYYMMDD)",
+        "role": "event date",
+        "description": "Event start date from NOAA Billion-Dollar dataset.",
+    },
+    {
+        "dataset": "florida_hurricane_economic_merged_long",
+        "column_name": "end_date",
+        "data_type": "string (YYYYMMDD)",
+        "role": "event date",
+        "description": "Event end date from NOAA Billion-Dollar dataset.",
+    },
+    {
+        "dataset": "florida_hurricane_economic_merged_long",
+        "column_name": "metric",
+        "data_type": "string",
+        "role": "measure name",
+        "description": "Hurricane/economic metric label for the event.",
+    },
+    {
+        "dataset": "florida_hurricane_economic_merged_long",
+        "column_name": "value",
+        "data_type": "numeric|boolean",
+        "role": "measure value",
+        "description": "Observed value for the event-level metric.",
+    },
+    {
+        "dataset": "florida_storms_60nm_2000_2025_long",
+        "column_name": "storm_id",
+        "data_type": "string",
+        "role": "identifier",
+        "description": "HURDAT2 storm identifier.",
+    },
+    {
+        "dataset": "florida_storms_60nm_2000_2025_long",
+        "column_name": "storm_name",
+        "data_type": "string",
+        "role": "identifier",
+        "description": "Storm name from HURDAT2.",
+    },
+    {
+        "dataset": "florida_storms_60nm_2000_2025_long",
+        "column_name": "year",
+        "data_type": "integer",
+        "role": "time",
+        "description": "Calendar year of the storm record.",
+    },
+    {
+        "dataset": "florida_storms_60nm_2000_2025_long",
+        "column_name": "metric",
+        "data_type": "string",
+        "role": "measure name",
+        "description": "Storm-level metric label for the processed output.",
+    },
+    {
+        "dataset": "florida_storms_60nm_2000_2025_long",
+        "column_name": "value",
+        "data_type": "numeric|boolean",
+        "role": "measure value",
+        "description": "Observed value for the storm-level metric.",
+    },
+]
+data_dictionary_df = pd.DataFrame(data_dictionary_rows)
+data_dictionary_path = FINAL_DATA_DIR / "housing_data_dictionary_long.csv"
+data_dictionary_df.to_csv(data_dictionary_path, index=False, encoding="utf-8")
+print(f"  ✓ Saved: {data_dictionary_path.relative_to(PROJECT_ROOT)}")
+
+# 7d. Final confirmation
 print(f"\n{'=' * 70}")
 print(f"PIPELINE COMPLETE")
 print(f"{'=' * 70}")
 print(f"  Output files:")
 print(f"    1. {output_csv.relative_to(PROJECT_ROOT)} ({n_obs} rows × {len(panel.columns)} cols)")
-print(f"    2. {output_json.relative_to(PROJECT_ROOT)}")
+print(f"    2. {legacy_output_csv.relative_to(PROJECT_ROOT)} ({n_obs} rows × {len(panel.columns)} cols)")
+print(f"    3. {output_json.relative_to(PROJECT_ROOT)}")
+print(f"    4. {data_dictionary_path.relative_to(PROJECT_ROOT)}")
 print(f"  Panel: {n_entities} metros × {n_periods} months = {n_obs} observations ({balanced})")
 print(f"  Variables: {list(panel.columns)}")

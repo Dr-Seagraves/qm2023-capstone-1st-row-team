@@ -46,10 +46,14 @@ We test whether periods with higher storm intensity or closer proximity are asso
 
 3. **Verify outputs**
 
-	- `data/final/housing_analysis_panel.csv` — tidy panel (Metro × Month)
+	- `data/processed/florida_storms_60nm_2000_2025_long.csv` — processed storm metrics in long format
+	- `data/processed/florida_hurricane_economic_merged_long.csv` — processed hurricane-economic metrics in long format
+	- `data/final/housing_master_dataset_long.csv` — master dataset in long format (`Metro`, `Date`, `metric`, `value`)
+	- `data/final/housing_analysis_panel.csv` — legacy filename, now also long format
+	- `data/final/housing_data_dictionary_long.csv` — long-form data dictionary
 	- `data/final/housing_metadata.json` — dataset metadata and cleaning decisions
 
-The script fetches all data from source URLs (cached after first download), cleans, filters, merges, and saves the final panel. No manual steps are required.
+The script fetches all data from source URLs (cached after first download), cleans, filters, merges, and saves long-format datasets. No manual steps are required.
 
 ## Project Structure
 
@@ -64,10 +68,14 @@ The script fetches all data from source URLs (cached after first download), clea
 │   └── dataset_sources.txt      # Source URL registry
 ├── data/
 │   ├── raw/                     # Downloaded source files (auto-fetched, cached)
-│   ├── processed/               # Intermediate outputs (storm filter, etc.)
+│   ├── processed/               # Intermediate outputs (long format)
+│   │   ├── florida_storms_60nm_2000_2025_long.csv
+│   │   └── florida_hurricane_economic_merged_long.csv
 │   └── final/                   # Final outputs
-│       ├── housing_analysis_panel.csv   # Tidy analysis panel
-│       └── housing_metadata.json        # Dataset metadata
+│       ├── housing_master_dataset_long.csv  # Long master dataset
+│       ├── housing_analysis_panel.csv       # Legacy filename (long format)
+│       ├── housing_data_dictionary_long.csv # Long-form data dictionary
+│       └── housing_metadata.json            # Dataset metadata
 ├── results/
 │   ├── figures/                 # Generated plots
 │   ├── tables/                  # Statistical output tables
