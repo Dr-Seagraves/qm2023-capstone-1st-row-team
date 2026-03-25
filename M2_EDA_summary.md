@@ -66,8 +66,8 @@ Nevaeh Marquez · Logan Ledbetter · River Wullkotte · Sam Bronner
 
 | Metric | Mean | Std. Dev | Min | Max | Notes |
 |--------|------|----------|-----|-----|-------|
-| **ZHVI ($)** | 223,400 | 106,500 | 79,200 | 616,000 | Primary outcome; low missingness. |
-| **Hurricane Total Cost ($B)** | 5.2 | 18.4 | 0.0 | 127.0 | Right-skewed; log(1+x) or bins may help. |
+| **ZHVI ($)** | 223,400 | 106,500 | 79,200 | 616,000 | Primary outcome; very little missing data. |
+| **Hurricane Total Cost ($B)** | 5.2 | 18.4 | 0.0 | 127.0 | Right-skewed; bins may help. |
 | **Hurricane Count** | 0.22 | 0.44 | 0.0 | 3.0 | Zero-inflated monthly distribution. |
 | **Sales Count** | 4,200 | 5,100 | 50 | 28,000 | Sparse pre-2018 coverage; use cautiously. |
 | **Market Temp** | 35.5 | 24.1 | -50 | 90 | Interpretable but incomplete in early years. |
