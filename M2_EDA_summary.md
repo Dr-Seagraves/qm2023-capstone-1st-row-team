@@ -1,6 +1,6 @@
 # Milestone 2 — EDA Summary & Findings
 **QM 2023 Capstone Project · 1st Row Team**  
-Nevaeh Marquez · Logan Ledbetter · Raleigh Elizabeth Wullkotte · Sam Bronner
+Nevaeh Marquez · Logan Ledbetter · River Wullkotte · Sam Bronner
 
 ---
 

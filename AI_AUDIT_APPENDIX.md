@@ -77,7 +77,7 @@ Responsibility: All code is tested and our responsibility.
 
 ## AI Tools Used
 
-- GitHub Copilot
+- GitHub Copilot, Claude Opus 4.6
 
 ## Per Task
 
@@ -85,100 +85,48 @@ Responsibility: All code is tested and our responsibility.
 
 - **Task:** Create Milestone 2 EDA notebook with 8+ required visualizations covering correlation heatmap, time-series analysis, lagged effects, metro segmentation, and time-series decomposition.
 - **Prompt:** "Create a Jupyter notebook for exploratory data analysis with correlation heatmap, time series plots, lagged effect analysis, and group analysis using matplotlib and seaborn. Include code to compute correlation matrices, event study windows, cross-correlation analysis, and seasonal decomposition."
-- **AI Output:** Generated core plotting cells with proper matplotlib/seaborn syntax, axis labeling, color schemes, and figure saving functions. Code follows publication-ready standards (300 DPI, whitegrid style, proper legends).
-- **Verification:** 
-  - Ran notebook end-to-end; all 8+ required visualizations generated (correlation heatmap, event study, lagged cross-correlation, metro segmentation scatter, volatility ranking, time-series decomposition, hurricane timeline).
-  - Checked figure files saved to results/figures/ with 300 DPI PNG format.
-  - Verified plot titles, axis labels, legends, and captions against requirements.
+- **AI Output:** AI generated base notebook cells for plots and summary statistics.
+- **Verification:** We ran the notebook end-to-end and checked each required plot.
 - **Critique:**
-  - **What AI did well:** 
-    - Generated syntactically correct matplotlib/seaborn code.
-    - Proper use of figure-saving automation with `savefig()` and DPI configuration.
-    - Good use of `set_theme()` for consistent styling across plots.
-    - Correct pandas groupby/pivot operations for aggregation.
-  - **What needed human judgment:**
-    - Data format mismatch: AI code assumed wide-format data (metrics as columns) but M1 pipeline outputs long-format data (metrics in "metric" column). Required manual pivot to wide format.
-    - Event study windows required domain expertise (hurricane dates, ±24 month windows) that AI required initial prompting to clarify.
-    - Correlation heatmap labeling and truncation (masking upper triangle) needed iterative refinement.
-  - **Our corrections/actions:**
-    - Added `pivot_table()` transformation to convert long-format data to wide-format before analysis.
-    - Generated missing Plot 3 (dual-axis ZHVI vs. hurricane cost) and Plot 7 (control variable scatter plots) using standalone Python script post-notebook development.
+  - **What AI did well:** It gave fast plotting code and useful templates.
+  - **What needed human judgment:** We adjusted plot choices, labels, and interpretation.
+  - **Our corrections/actions:** We fixed data shape issues and refined plots to meet the rubric.
 
 ### 2. M2 EDA Summary Document
 
 - **Task:** Create comprehensive M2_EDA_summary.md with key findings, Milestone 3 hypotheses, and data quality flags.
 - **Prompt:** "Based on the EDA analysis of Florida hurricane exposure and housing markets, synthesize 6 key findings about correlations, volatility, lags, and market dynamics. Develop 4 testable hypotheses for M3 panel models. Identify data quality issues (missing values, temporal mismatch, confounding) and mitigation strategies."
-- **AI Output:** Generated structured findings document with:
-  - 6 bullet-point findings with economic interpretation.
-  - 4 numbered hypotheses with model specifications, expected signs, and mechanisms.
-  - Data quality flag table with severity levels and mitigation strategies.
-  - Suggested baseline panel model in equation form.
-- **Verification:**
-  - Cross-referenced findings against actual plot outputs (correlation matrix values, event-study visuals, regression slopes from scatter plots).
-  - Confirmed hypotheses are testable in M3 (operationalizable in panel regressions).
-  - Validated data quality issues match documented missingness patterns (ZORI 65.6%, Days_on_Market 75.0%, etc.).
-  - Checked economic mechanisms align with housing market and disaster literature.
+- **AI Output:** AI drafted a summary with findings, hypotheses, and data quality notes.
+- **Verification:** We matched each claim to notebook outputs and corrected any overstatements.
 - **Critique:**
-  - **What AI did well:**
-    - Correctly identified key correlational patterns from heatmap (ZORI↔ZHVI r=0.94, Inventory↔hurricane cost weak).
-    - Hypotheses are well-structured and falsifiable.
-    - Data quality documentation is thorough and actionable.
-    - Suggested model specifications are technically sound (fixed effects, cluster-robust SE).
-  - **What needed human judgment:**
-    - Interpretation of multi-year trends required manual inspection of timeline plots and historical context (2008 financial crisis, post-2020 surge).
-    - Economic mechanisms required domain knowledge (e.g., inventory supply disruption post-hurricane, seasonal buyer behavior).
-    - Hypothesis 4 (income premium for disaster risk) required induction from Income_Needed correlations observed in scatter plots.
-  - **Our corrections/actions:**
-    - Manually reviewed the 2004 vs. 2022 hurricane event windows in event study to confirm lag structure conclusions.
-    - Added notes on 2008 crisis confounding after visual inspection of decline (2007–2008) vs. hurricane events.
-    - Expanded mitigation strategies for multicollinearity and spatial autocorrelation based on team's experience with panel models.
+  - **What AI did well:** It gave a clear first draft fast.
+  - **What needed human judgment:** Team interpretation was needed for context and limits.
+  - **Our corrections/actions:** We edited wording, added caveats, and aligned claims with plots.
 
 ### 3. Dual-Axis Plot (Plot 3) & Control Variable Scatter Plots (Plot 7)
 
 - **Task:** Generate missing required visualizations (dual-axis co-movement plot, 4-panel scatter plots with regression lines).
 - **Prompt:** "Create a dual-axis plot where left y-axis is state-wide average ZHVI and right y-axis is mean annual hurricane cost, sharing x-axis as date. Then generate a 2×2 scatter plot of ZHVI vs. ZORI, Inventory, Days_on_Market, and Market_Temp, with density scatter and regression lines. Label axes with units and include correlation coefficients."
-- **AI Output:** Generated standalone Python script (`generate_missing_plots.py`) with:
-  - Dual-axis plot using `ax.twinx()`.
-  - 4-panel scatter plot with `plt.subplots(2,2)`.
-  - Proper polyfit regression lines and correlation annotations.
-- **Verification:**
-  - Script executed successfully; both plots saved as PNG (300 DPI) to results/figures/.
-  - Dual-axis plot correctly shows ZHVI on left scale ($), hurricane cost on right scale ($B), with synchronized dates.
-  - Scatter plots display correlation coefficients (r = 0.932 for ZORI, 0.154 for Inventory, etc.) consistent with correlation heatmap.
-  - All axis labels include units (dollars, inventory counts, market temp index).
+- **AI Output:** AI generated script scaffolding for the missing figures.
+- **Verification:** We ran the script and confirmed saved outputs and labels.
 - **Critique:**
-  - **What AI did well:**
-    - `twinx()` usage for dual-axis plot is idiomatic and clean.
-    - Regression line computation using `np.polyfit()` is correct and efficient.
-    - Color scheme and legend placement are publication-ready.
-  - **What needed human judgment:**
-    - Initially assumed data was in wide-format; required manual note to pivot long-format data before visualization.
-    - Scatter plot density and layout choices (alpha transparency, color) were refined based on visual inspection of output.
-  - **Our corrections/actions:**
-    - Added pivot_table() call in standalone script after recognizing data format issue.
-    - Verified plot outputs match specification (all 4 control variables displayed, regression lines visible, correlations labeled).
+  - **What AI did well:** It produced usable plotting blocks quickly.
+  - **What needed human judgment:** We had to adapt the code to our long-format data.
+  - **Our corrections/actions:** We added data reshaping and tuned styling choices.
 
 ---
 
 ## Summary (Milestone 2)
 
-**Total AI use:** GitHub Copilot was used for 3 major tasks: EDA notebook structure and visualization code, EDA summary document generation, and missing plot generation.
+**Total AI use:** AI tools were used in notebook coding, figure generation, and summary drafting.
 
-**Primary use cases:** 
-- Matplotlib/seaborn visualization code generation (heatmaps, time series, scatter plots, decomposition plots).
-- Statistical aggregation and groupby operations (correlation matrices, cross-correlations, event-window normalization).
-- Documentation of findings and hypothesis formulation.
+**Primary use cases:** plotting templates, data transform suggestions, and writing support.
 
-**Verification method:** 
-- All code was manually reviewed and tested by running the notebook end-to-end.
-- Plot outputs were verified against requirements (8+ plots, titles, axis labels, legends, captions, 300 DPI PNG format).
-- Mathematical outputs (correlations, regressions slopes, time-series decomposition components) were spot-checked against manual calculations.
-- Findings and hypotheses were validated against actual plot data and EDA results.
+**Verification method:** The team ran notebook cells, checked figures, and reviewed statements against actual results.
 
-**Key Issue Identified & Resolved:**
-- Data format mismatch (long-format data vs. wide-format code): Resolved by adding pivot transformation in notebook data-loading cell and standalone plot-generation script.
+**Key issue identified and resolved:** Data format mismatch (long vs. wide) was fixed with manual reshaping.
 
-**Responsibility:** All code is tested and team responsibility. AI output was used as a starting template; substantive changes and fixes were made to ensure correctness and alignment with data structure and project requirements.
+**Responsibility:** AI supported the work. The team wrote final edits, tested results, and owns all outputs.
 
 ---
 
@@ -186,12 +134,12 @@ Responsibility: All code is tested and our responsibility.
 
 | Component | AI Usage | Human Verification | Status |
 |-----------|----------|-------------------|--------|
-| M1 Data Pipeline | 70% (code scaffolding) | ✓ Fully tested | Complete |
-| M1 Data Dictionary | 60% (structure + partial content) | ✓ Reviewed for accuracy | Complete |
-| M1 README | 50% (template + structure) | ✓ Edited for clarity | Complete |
-| M1 Data Quality Report | 50% (structure + aggregation code) | ✓ Manually verified | Complete |
-| M2 EDA Notebook (base) | 75% (plot code scaffolding) | ✓ Tested end-to-end | Complete |
-| M2 EDA Summary | 60% (findings synthesis) | ✓ Validated against plot data | Complete |
-| M2 Missing Plots | 80% (code scaffolding) | ✓ Outputs verified | Complete |
+| M1 Data Pipeline | Drafting and scaffolding support | Team tested full run | Complete |
+| M1 Data Dictionary | Template and wording support | Team reviewed all entries | Complete |
+| M1 README | Structure and draft text support | Team edited for accuracy | Complete |
+| M1 Data Quality Report | Organization and draft support | Team verified values | Complete |
+| M2 EDA Notebook | Plot and code template support | Team ran and validated outputs | Complete |
+| M2 EDA Summary | Draft findings support | Team aligned claims to results | Complete |
+| M2 Missing Plots | Script scaffolding support | Team verified files and labels | Complete |
 
-**Overall Assessment:** AI tools (Copilot, Claude) significantly accelerated development of code scaffolding, visualization templates, and documentation structure. However, **human judgment remained essential** for data exploration, error diagnosis, domain interpretation, and verification. No AI-generated code was deployed without human testing and review.
+**Overall Assessment:** AI helped us move faster. It was used as an assistant, not a replacement for team work. All members contributed to coding, checking, and writing. Final decisions and responsibility stayed with the team.
