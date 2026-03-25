@@ -180,5 +180,5 @@ Outputs will appear in `data/final/`. Source data is auto-fetched and cached in 
 
 - **Nevaeh Marquez**
 - **Logan Ledbetter**
-- **Raleigh Elizabeth Wullkotte**
+- **River Wullkotte**
 - **Sam Bronner**
