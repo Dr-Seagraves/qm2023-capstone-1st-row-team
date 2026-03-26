@@ -1,23 +1,43 @@
-event_name,year,begin_date,end_date,cost_usd_billion_cpi_adjusted,deaths,closest_distance_nm,max_wind_kt,min_pressure_mb,storm_id
-Hurricane Milton,2024,"October 9, 2024","October 10, 2024",34.3,32,,,,
-Hurricane Helene,2024,"September 24, 2024","September 29, 2024",78.7,219,,,,
-Hurricane Debby,2024,"August 5, 2024","August 9, 2024",2.5,17,,,,
-Hurricane Idalia,2023,"August 29, 2023","August 31, 2023",3.6,5,,,,
-Hurricane Nicole,2022,"November 10, 2022","November 11, 2022",1.1,5,,,,
-Hurricane Ian,2022,"September 28, 2022","September 30, 2022",119.6,152,49.8,140,929,AL092022
-Tropical Storm Fred,2021,"August 16, 2021","August 18, 2021",1.5,7,,,,
-Tropical Storm Elsa,2021,"July 7, 2021","July 9, 2021",1.4,1,,,,
-Tropical Storm Eta,2020,"November 8, 2020","November 12, 2020",1.8,12,,,,
-Hurricane Michael,2018,"October 10, 2018","October 11, 2018",31.2,49,,,,
-Hurricane Irma,2017,"September 6, 2017","September 12, 2017",64.0,97,,,,
-Hurricane Wilma,2005,"October 24, 2005","October 24, 2005",30.0,35,,,,
-Hurricane Katrina,2005,"August 25, 2005","August 30, 2005",201.3,"1,833",,,,
-Hurricane Dennis,2005,"July 9, 2005","July 11, 2005",4.0,15,,,,
-Hurricane Jeanne,2004,"September 15, 2004","September 29, 2004",12.4,28,,,,
-Hurricane Frances,2004,"September 3, 2004","September 9, 2004",16.3,48,,,,
-Hurricane Charley,2004,"August 13, 2004","August 14, 2004",26.7,35,,,,
-Hurricane Georges,1998,"September 20, 1998","September 29, 1998",11.6,16,,,,
-Hurricane Opal,1995,"October 4, 1995","October 6, 1995",9.6,27,,,,
-Hurricane Erin,1995,"August 1, 1995","August 7, 1995",1.8,6,,,,
-Tropical Storm Alberto,1994,"July 7, 1994","July 10, 1994",2.1,32,,,,
-Hurricane Andrew,1992,"August 23, 1992","August 27, 1992",60.5,61,,,,
+event_name,year,begin_date,end_date,metric,value
+Hurricane Charley (August 2004),2004,20040813,20040814,cost_usd_billion_cpi_adjusted,26.72
+Hurricane Frances (September 2004),2004,20040903,20040909,cost_usd_billion_cpi_adjusted,16.27
+Hurricane Jeanne (September 2004),2004,20040915,20040929,cost_usd_billion_cpi_adjusted,12.44
+Hurricane Irma (September 2017),2017,20170906,20170912,cost_usd_billion_cpi_adjusted,64.0
+Hurricane Ian (September 2022),2022,20220928,20220930,cost_usd_billion_cpi_adjusted,119.63
+Hurricane Nicole (November 2022),2022,20221110,20221111,cost_usd_billion_cpi_adjusted,1.08
+Hurricane Milton (October 2024),2024,20241009,20241010,cost_usd_billion_cpi_adjusted,34.25
+Hurricane Charley (August 2004),2004,20040813,20040814,deaths,35
+Hurricane Frances (September 2004),2004,20040903,20040909,deaths,48
+Hurricane Jeanne (September 2004),2004,20040915,20040929,deaths,28
+Hurricane Irma (September 2017),2017,20170906,20170912,deaths,97
+Hurricane Ian (September 2022),2022,20220928,20220930,deaths,152
+Hurricane Nicole (November 2022),2022,20221110,20221111,deaths,5
+Hurricane Milton (October 2024),2024,20241009,20241010,deaths,32
+Hurricane Charley (August 2004),2004,20040813,20040814,closest_distance_nm,36.4
+Hurricane Frances (September 2004),2004,20040903,20040909,closest_distance_nm,24.1
+Hurricane Jeanne (September 2004),2004,20040915,20040929,closest_distance_nm,24.4
+Hurricane Irma (September 2017),2017,20170906,20170912,closest_distance_nm,43.3
+Hurricane Ian (September 2022),2022,20220928,20220930,closest_distance_nm,24.1
+Hurricane Nicole (November 2022),2022,20221110,20221111,closest_distance_nm,36.8
+Hurricane Milton (October 2024),2024,20241009,20241010,closest_distance_nm,32.5
+Hurricane Charley (August 2004),2004,20040813,20040814,max_wind_kt,130
+Hurricane Frances (September 2004),2004,20040903,20040909,max_wind_kt,125
+Hurricane Jeanne (September 2004),2004,20040915,20040929,max_wind_kt,105
+Hurricane Irma (September 2017),2017,20170906,20170912,max_wind_kt,155
+Hurricane Ian (September 2022),2022,20220928,20220930,max_wind_kt,140
+Hurricane Nicole (November 2022),2022,20221110,20221111,max_wind_kt,65
+Hurricane Milton (October 2024),2024,20241009,20241010,max_wind_kt,155
+Hurricane Charley (August 2004),2004,20040813,20040814,min_pressure_mb,941
+Hurricane Frances (September 2004),2004,20040903,20040909,min_pressure_mb,935
+Hurricane Jeanne (September 2004),2004,20040915,20040929,min_pressure_mb,950
+Hurricane Irma (September 2017),2017,20170906,20170912,min_pressure_mb,914
+Hurricane Ian (September 2022),2022,20220928,20220930,min_pressure_mb,937
+Hurricane Nicole (November 2022),2022,20221110,20221111,min_pressure_mb,980
+Hurricane Milton (October 2024),2024,20241009,20241010,min_pressure_mb,895
+Hurricane Charley (August 2004),2004,20040813,20040814,has_florida_landfall,True
+Hurricane Frances (September 2004),2004,20040903,20040909,has_florida_landfall,True
+Hurricane Jeanne (September 2004),2004,20040915,20040929,has_florida_landfall,True
+Hurricane Irma (September 2017),2017,20170906,20170912,has_florida_landfall,True
+Hurricane Ian (September 2022),2022,20220928,20220930,has_florida_landfall,True
+Hurricane Nicole (November 2022),2022,20221110,20221111,has_florida_landfall,True
+Hurricane Milton (October 2024),2024,20241009,20241010,has_florida_landfall,True
