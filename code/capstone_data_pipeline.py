@@ -20,6 +20,7 @@ import json
 import math
 import os
 import re
+import runpy
 import sys
 import time
 from pathlib import Path
@@ -904,3 +905,28 @@ print(f"    3. {output_json.relative_to(PROJECT_ROOT)}")
 print(f"    4. {data_dictionary_path.relative_to(PROJECT_ROOT)}")
 print(f"  Panel: {n_entities} metros × {n_periods} months = {n_obs} observations ({balanced})")
 print(f"  Variables: {list(panel.columns)}")
+
+
+# =============================================================================
+# Section 8: Generate supplemental figures
+# =============================================================================
+
+print("\n" + "=" * 70)
+print("SECTION 8: Generate Supplemental Figures")
+print("=" * 70)
+
+skip_plots = os.environ.get("CAPSTONE_SKIP_PLOTS", "0") == "1"
+plots_script = PROJECT_ROOT / "code" / "generate_missing_plots.py"
+
+if skip_plots:
+    print("  Skipping supplemental plot generation (CAPSTONE_SKIP_PLOTS=1).")
+elif not plots_script.exists():
+    print(f"  WARNING: Plot script not found at {plots_script}; skipping.")
+else:
+    print("  Running code/generate_missing_plots.py ...")
+    try:
+        runpy.run_path(str(plots_script), run_name="__main__")
+        print("  ✓ Supplemental plots generated.")
+    except Exception as e:
+        print(f"  ERROR: Supplemental plot generation failed: {e}")
+        raise

@@ -56,11 +56,15 @@ pip install -r requirements.txt
 python code/capstone_data_pipeline.py
 ```
 
+This single command now builds the final datasets and generates the supplemental M2 plot files in `results/figures/`.
+
 3. **Optional: generate supplemental M2 figures**
 
 ```bash
 python code/generate_missing_plots.py
 ```
+
+You can skip plot generation during the main pipeline run by setting `CAPSTONE_SKIP_PLOTS=1`.
 
 4. **Optional: open the EDA notebook**
 

@@ -15,10 +15,15 @@ import seaborn as sns
 # ---------------------------------------------------------------------------
 # Setup
 # ---------------------------------------------------------------------------
-PROJECT_ROOT = Path.cwd() if Path.cwd().name == "qm2023-capstone-1st-row-team" else Path.cwd().parent
+PROJECT_ROOT = Path(__file__).resolve().parent.parent
 DATA_FINAL = PROJECT_ROOT / "data" / "final" / "housing_analysis_panel.csv"
 FIGURES_DIR = PROJECT_ROOT / "results" / "figures"
 FIGURES_DIR.mkdir(parents=True, exist_ok=True)
+
+if not DATA_FINAL.exists():
+    raise FileNotFoundError(
+        f"Expected dataset not found: {DATA_FINAL}. Run code/capstone_data_pipeline.py first."
+    )
 
 # Plot defaults
 sns.set_theme(style="whitegrid", palette="muted", font_scale=1.2)
@@ -36,11 +41,15 @@ plt.rcParams.update({
     "lines.linewidth": 2,
 })
 
-def save_fig(fig, name):
-    """Save figure to results/figures/ as PNG."""
-    path = FIGURES_DIR / f"{name}.png"
-    fig.savefig(path)
-    print(f"Saved → {path.relative_to(PROJECT_ROOT)}")
+def save_fig(fig, *names):
+    """Save a figure using one or more output names (without extension)."""
+    if not names:
+        raise ValueError("At least one output figure name is required.")
+
+    for name in names:
+        path = FIGURES_DIR / f"{name}.png"
+        fig.savefig(path)
+        print(f"Saved → {path.relative_to(PROJECT_ROOT)}")
 
 # ---------------------------------------------------------------------------
 # Load data and convert from long to wide format
@@ -74,6 +83,11 @@ print(f"Columns: {df.columns.tolist()}")
 # PLOT 3: Dual-Axis — ZHVI vs. Hurricane Cost
 # ---------------------------------------------------------------------------
 print("\n--- Generating Plot 3: Dual-Axis Plot ---")
+required_plot3_cols = {"ZHVI", "hurricane_total_cost_billion"}
+missing_plot3_cols = [c for c in required_plot3_cols if c not in df.columns]
+if missing_plot3_cols:
+    raise KeyError(f"Missing required columns for Plot 3: {missing_plot3_cols}")
+
 state_zhvi = (
     df.dropna(subset=["ZHVI"])
     .groupby("Date")["ZHVI"]
@@ -120,7 +134,7 @@ labels = [l.get_label() for l in lines]
 ax1.legend(lines, labels, loc="upper left", fontsize=11, framealpha=0.9, edgecolor="black")
 
 fig.tight_layout()
-save_fig(fig, "dual_axis_zhvi_vs_hurricane_cost")
+save_fig(fig, "dual_axis_zhvi_vs_hurricane_cost", "plot3_dual_axis_outcome_vs_driver")
 plt.close()
 
 # ---------------------------------------------------------------------------
@@ -130,11 +144,17 @@ print("\n--- Generating Plot 7: Control Variable Scatter Plots ---")
 control_vars = ["ZORI", "Income_Needed", "Sales_Count"]
 control_vars = [c for c in control_vars if c in df.columns]
 
+if not control_vars:
+    raise KeyError("No control variables found for Plot 7. Expected at least one of ZORI, Income_Needed, Sales_Count.")
+
 # Prepare data
 plot_df = df[["ZHVI"] + control_vars].dropna()
 print(f"Data for scatter plots: {plot_df.shape}")
 
-fig, axes = plt.subplots(1, 3, figsize=(18, 5.5))
+n_cols = len(control_vars)
+fig, axes = plt.subplots(1, n_cols, figsize=(6 * n_cols, 5.5))
+if n_cols == 1:
+    axes = [axes]
 
 for idx, var in enumerate(control_vars):
     ax = axes[idx]
@@ -150,10 +170,16 @@ for idx, var in enumerate(control_vars):
     ax.scatter(plot_df[var], plot_df["ZHVI"], alpha=0.4, s=25, color="#1f77b4", edgecolors="none")
     
     # Regression line with thicker appearance
-    z = np.polyfit(plot_df[var].dropna(), plot_df.loc[plot_df[var].notna(), "ZHVI"], 1)
-    p = np.poly1d(z)
-    x_line = np.linspace(plot_df[var].min(), plot_df[var].max(), 100)
-    ax.plot(x_line, p(x_line), "r--", linewidth=2.5, label=f"Linear Fit (slope={z[0]:.2f})", zorder=5)
+    x = plot_df[var].dropna()
+    y = plot_df.loc[plot_df[var].notna(), "ZHVI"]
+    if x.nunique() > 1 and len(x) > 1:
+        z = np.polyfit(x, y, 1)
+        p = np.poly1d(z)
+        x_line = np.linspace(plot_df[var].min(), plot_df[var].max(), 100)
+        ax.plot(x_line, p(x_line), "r--", linewidth=2.5, label=f"Linear Fit (slope={z[0]:.2f})", zorder=5)
+    else:
+        ax.text(0.03, 0.97, "Insufficient variation for linear fit", transform=ax.transAxes,
+                fontsize=9, verticalalignment="top", bbox={"facecolor": "white", "alpha": 0.8, "edgecolor": "none"})
     
     # Correlation
     corr = plot_df[var].corr(plot_df["ZHVI"])
@@ -174,7 +200,7 @@ for idx, var in enumerate(control_vars):
 fig.suptitle("Control Variable Relationships: Home Values vs. Key Housing Market Indicators (Strong Correlates)", 
              fontsize=15, fontweight="bold", y=1.00)
 fig.tight_layout()
-save_fig(fig, "control_variables_scatter_plots")
+save_fig(fig, "control_variables_scatter_plots", "plot7_control_scatter_regplots")
 plt.close()
 
 print("\n✓ All missing plots generated successfully!")
