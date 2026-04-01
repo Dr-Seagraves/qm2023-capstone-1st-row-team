@@ -39,8 +39,11 @@ How does hurricane activity and landfall exposure in Florida relate to key housi
    - Supplemental visualization script completed in `code/generate_missing_plots.py`.
    - EDA findings and model hypotheses documented in `M2_EDA_summary.md`.
 
-3. **Milestone 3 (In Progress)**
-   - Model implementation and inference are the current next phase.
+3. **Milestone 3 (Complete)**
+   - Econometric models implemented in `code/capstone_models.py`.
+   - Required diagnostics and robustness checks completed.
+   - Forecasting (ARIMA) and ML comparison (OLS vs Random Forest) completed.
+   - Interpretation memo completed in `M3_interpretation.md`.
 
 ## How to Run the Pipeline
 
@@ -66,7 +69,13 @@ python code/generate_missing_plots.py
 
 You can skip plot generation during the main pipeline run by setting `CAPSTONE_SKIP_PLOTS=1`.
 
-4. **Optional: open the EDA notebook**
+4. **Run Milestone 3 models**
+
+```bash
+python code/capstone_models.py
+```
+
+5. **Optional: open the EDA notebook**
 
 ```bash
 jupyter notebook code/M2_eda_dashboard.ipynb
@@ -78,6 +87,8 @@ jupyter notebook code/M2_eda_dashboard.ipynb
 - `data/final/` — analysis-ready outputs
 - `results/figures/` — generated visualizations
 - `results/tables/summary_stats_by_metro.csv` — summary statistics table
+- `results/tables/M3_*.csv` — model, diagnostics, robustness, and forecast tables
+- `results/figures/M3_*.png` — M3 diagnostic and forecast figures
 
 ## Project Structure
 
@@ -85,12 +96,13 @@ jupyter notebook code/M2_eda_dashboard.ipynb
 ├── code/
 │   ├── capstone_data_pipeline.py     # Main pipeline script (M1)
 │   ├── generate_missing_plots.py     # Supplemental M2 plot generation
+│   ├── capstone_models.py            # Milestone 3 econometric models
 │   └── M2_eda_dashboard.ipynb        # Milestone 2 EDA notebook
 ├── requirements.txt                  # Python dependencies
 ├── README.md                         # This file
 ├── M1_data_quality_report.md         # Milestone 1 data quality report
-├── M2_EDA_summary.md                 # Milestone 2 EDA findings and hypotheses
-├── AI_AUDIT_APPENDIX.md              # AI usage disclosure and verification
+├── M2_data_quality_report.md         # Milestone 2 documentation
+├── M3_interpretation.md              # Milestone 3 interpretation memo
 ├── config/
 │   └── dataset_sources.txt           # Source URL registry
 ├── data/
@@ -100,7 +112,7 @@ jupyter notebook code/M2_eda_dashboard.ipynb
 ├── results/
 │   ├── figures/                      # Generated plots
 │   ├── tables/                       # Statistical output tables
-│   └── reports/                      # Written reports
+│   └── reports/                      # Written reports (incl. AI_AUDIT_APPENDIX.md and M2_EDA_summary.md)
 └── tests/                            # Test/autograding files
 ```
 

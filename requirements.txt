@@ -5,4 +5,7 @@ matplotlib>=3.7
 seaborn>=0.12
 statsmodels>=0.14
 scipy>=1.10
+linearmodels>=5.4
+scikit-learn>=1.4
+pmdarima>=2.0
 jupyter
