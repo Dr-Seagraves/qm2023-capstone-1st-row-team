@@ -8,4 +8,5 @@ scipy>=1.10
 linearmodels>=5.4
 scikit-learn>=1.4
 pmdarima>=2.0
+openpyxl>=3.1
 jupyter

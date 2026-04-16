@@ -184,35 +184,115 @@ def run_diagnostics(
 
 
 def compile_regression_table(models: Dict[str, object], key_vars: List[str]) -> pd.DataFrame:
+    def stars(pvalue: float) -> str:
+        if pd.isna(pvalue):
+            return ""
+        if pvalue < 0.01:
+            return "***"
+        if pvalue < 0.05:
+            return "**"
+        if pvalue < 0.10:
+            return "*"
+        return ""
+
+    def fmt_coef(value: float, pvalue: float) -> str:
+        if pd.isna(value):
+            return ""
+        return f"{value:.6f}{stars(pvalue)}"
+
+    def fmt_se(value: float) -> str:
+        if pd.isna(value):
+            return ""
+        return f"({value:.6f})"
+
+    def adjusted_r2_within(result) -> float:
+        r2 = float(getattr(result, "rsquared_within", np.nan))
+        n = float(getattr(result, "nobs", np.nan))
+        k = float(len(getattr(result, "params", [])))
+        if np.isnan(r2) or np.isnan(n) or n <= (k + 1):
+            return np.nan
+        return 1 - (1 - r2) * ((n - 1) / (n - k - 1))
+
+    display_name = {
+        "storm_x_income_l1": "Storm x Income (t-1)",
+        "income_log": "log(Income Needed)",
+        "zori_growth": "Rent Growth",
+        "inventory_growth": "Inventory Growth",
+    }
+
+    model_labels = {
+        "Model1_FE": "(1) Baseline FE",
+        "Model2_FE_Clustered": "(2) + Clustered SE",
+        "Model3_FE_NoCovid": "(3) FE No COVID",
+    }
+
     rows = []
     for var in key_vars:
-        row = {"variable": var}
+        coef_row = {"Variable": display_name.get(var, var)}
+        se_row = {"Variable": ""}
         for model_name, result in models.items():
+            col = model_labels.get(model_name, model_name)
             coef = result.params.get(var, np.nan)
             se = result.std_errors.get(var, np.nan)
             pval = result.pvalues.get(var, np.nan)
-            row[f"{model_name}_coef"] = coef
-            row[f"{model_name}_se"] = se
-            row[f"{model_name}_pvalue"] = pval
-        rows.append(row)
+            coef_row[col] = fmt_coef(float(coef), float(pval) if not pd.isna(pval) else np.nan)
+            se_row[col] = fmt_se(float(se))
+        rows.append(coef_row)
+        rows.append(se_row)
 
-    footer = {
-        "variable": "N",
-    }
+    entity_row = {"Variable": "Entity FE"}
+    time_row = {"Variable": "Time FE"}
+    cluster_row = {"Variable": "Clustered SE (Metro)"}
+    n_row = {"Variable": "Observations"}
+    r2_row = {"Variable": "Adjusted R-squared (within)"}
+
     for model_name, result in models.items():
-        footer[f"{model_name}_coef"] = float(result.nobs)
-        footer[f"{model_name}_se"] = np.nan
-        footer[f"{model_name}_pvalue"] = np.nan
+        col = model_labels.get(model_name, model_name)
+        entity_row[col] = "Yes"
+        time_row[col] = "Yes"
+        cluster_row[col] = "Yes" if "Clustered" in model_name or "NoCovid" in model_name else "No"
+        n_row[col] = f"{int(float(result.nobs)):,}"
+        adj_r2 = adjusted_r2_within(result)
+        r2_row[col] = f"{adj_r2:.3f}" if not np.isnan(adj_r2) else ""
 
-    r2_row = {"variable": "R2_within"}
-    for model_name, result in models.items():
-        r2_row[f"{model_name}_coef"] = float(getattr(result, "rsquared_within", np.nan))
-        r2_row[f"{model_name}_se"] = np.nan
-        r2_row[f"{model_name}_pvalue"] = np.nan
+    rows.extend([entity_row, time_row, cluster_row, n_row, r2_row])
+    paper_table = pd.DataFrame(rows)
 
-    out = pd.DataFrame(rows + [footer, r2_row])
-    out.to_csv(TABLES_DIR / "M3_regression_table.csv", index=False)
-    return out
+    # Keep a machine-readable table with numeric fields for downstream checks.
+    numeric_rows = []
+    for var in key_vars:
+        row = {"variable": var}
+        for model_name, result in models.items():
+            row[f"{model_name}_coef"] = float(result.params.get(var, np.nan))
+            row[f"{model_name}_se"] = float(result.std_errors.get(var, np.nan))
+            row[f"{model_name}_pvalue"] = float(result.pvalues.get(var, np.nan))
+        numeric_rows.append(row)
+    numeric_rows.append(
+        {
+            "variable": "N",
+            **{f"{model_name}_coef": float(result.nobs) for model_name, result in models.items()},
+        }
+    )
+    numeric_rows.append(
+        {
+            "variable": "Adjusted_R2_within",
+            **{
+                f"{model_name}_coef": float(adjusted_r2_within(result))
+                for model_name, result in models.items()
+            },
+        }
+    )
+    numeric_table = pd.DataFrame(numeric_rows)
+
+    paper_table.to_csv(TABLES_DIR / "M3_regression_table.csv", index=False)
+    numeric_table.to_csv(TABLES_DIR / "M3_regression_table_numeric.csv", index=False)
+
+    try:
+        paper_table.to_excel(TABLES_DIR / "M3_regression_table.xlsx", index=False)
+    except Exception:
+        pass
+
+    return paper_table
 
 
 def run_robustness_checks(df: pd.DataFrame) -> pd.DataFrame:

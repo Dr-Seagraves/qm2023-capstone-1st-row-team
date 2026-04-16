@@ -135,7 +135,10 @@ Results are Florida-MSA specific and should not be generalized to other states w
 ## 7) Files Produced for M3
 
 - `code/capstone_models.py`
+- `code/reproduce_all.py`
+- `reproduce_all.py`
 - `results/tables/M3_regression_table.csv`
+- `results/tables/M3_regression_table_numeric.csv`
 - `results/tables/M3_diagnostics_summary.csv`
 - `results/tables/M3_vif_table.csv`
 - `results/tables/M3_robustness_checks.csv`
@@ -146,3 +149,5 @@ Results are Florida-MSA specific and should not be generalized to other states w
 - `results/figures/M3_residuals_vs_fitted.png`
 - `results/figures/M3_qq_plot.png`
 - `results/figures/M3_arima_forecast.png`
+
+The final regression table is exported in standard academic layout (one column per model, coefficients with standard errors in parentheses beneath, and footer rows for fixed effects, clustered SE usage, observations, and adjusted R-squared).

@@ -43,9 +43,43 @@ How does hurricane activity and landfall exposure in Florida relate to key housi
    - Econometric models implemented in `code/capstone_models.py`.
    - Required diagnostics and robustness checks completed.
    - Forecasting (ARIMA) and ML comparison (OLS vs Random Forest) completed.
+   - Final paper-style regression table exported to `results/tables/M3_regression_table.csv`.
    - Interpretation memo completed in `M3_interpretation.md`.
 
-## How to Run the Pipeline
+## Reproducibility From a Clean Clone
+
+This project is reproducible from a fresh clone with one command.
+
+1. **Clone and enter the repository**
+
+```bash
+git clone <repo-url>
+cd qm2023-capstone-1st-row-team
+```
+
+2. **Install Python dependencies**
+
+```bash
+pip install -r requirements.txt
+```
+
+3. **Run full reproducibility workflow (recommended)**
+
+```bash
+python reproduce_all.py
+```
+
+This will:
+- download/cache raw sources into `data/raw/`
+- build final analysis dataset in `data/final/`
+- run M3 models and export all figures/tables in `results/`
+
+Notes:
+- Internet is required on first run to fetch source datasets.
+- Re-runs use cached files in `data/raw/`.
+- Set `CAPSTONE_SKIP_PLOTS=1` to skip supplemental M2 figure generation during pipeline execution.
+
+## Step-By-Step Run (Optional)
 
 1. **Install Python dependencies**
 
@@ -88,6 +122,8 @@ jupyter notebook code/M2_eda_dashboard.ipynb
 - `results/figures/` — generated visualizations
 - `results/tables/summary_stats_by_metro.csv` — summary statistics table
 - `results/tables/M3_*.csv` — model, diagnostics, robustness, and forecast tables
+- `results/tables/M3_regression_table.csv` — final paper-style regression table (main M3 table)
+- `results/tables/M3_regression_table_numeric.csv` — machine-readable numeric coefficients/SE/p-values
 - `results/figures/M3_*.png` — M3 diagnostic and forecast figures
 
 ## Project Structure
@@ -97,7 +133,9 @@ jupyter notebook code/M2_eda_dashboard.ipynb
 │   ├── capstone_data_pipeline.py     # Main pipeline script (M1)
 │   ├── generate_missing_plots.py     # Supplemental M2 plot generation
 │   ├── capstone_models.py            # Milestone 3 econometric models
+│   ├── reproduce_all.py              # One-command reproducibility workflow
 │   └── M2_eda_dashboard.ipynb        # Milestone 2 EDA notebook
+├── reproduce_all.py                  # Root wrapper for full workflow
 ├── requirements.txt                  # Python dependencies
 ├── README.md                         # This file
 ├── M1_data_quality_report.md         # Milestone 1 data quality report
