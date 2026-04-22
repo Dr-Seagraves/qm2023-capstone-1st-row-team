@@ -9,7 +9,7 @@
 1. Importing Data
 
 - **Task:** Import project datasets from URLs and/or downloaded CSV files into the analysis pipeline.
-- **Prompt:** "help me import this data" (with the dataset URL pasted in the prompt).
+- **Prompt:** "Help me import this data" (with the dataset URL pasted in the prompt).
 - **AI Output:** AI generated code to load the provided data sources into dataframes/files for use in the project workflow.
 - **Verification:** We checked that the imported data matched the source data (file contents/structure looked correct), then shared results with Dr. Seagraves for confirmation.
 - **Critique:**
@@ -95,7 +95,7 @@ Responsibility: All code is tested and our responsibility.
 ### 2. M2 EDA Summary Document
 
 - **Task:** Create comprehensive M2_EDA_summary.md with key findings, Milestone 3 hypotheses, and data quality flags.
-- **Prompt:** "Based on the EDA analysis of Florida hurricane exposure and housing markets, synthesize 6 key findings about correlations, volatility, lags, and market dynamics. Develop 4 testable hypotheses for M3 panel models. Identify data quality issues (missing values, temporal mismatch, confounding) and mitigation strategies."
+- **Prompt:** "Look at the Florida hurricane and housing data and explain 6 simple things you notice, like how things are related, how much they change, if one thing happens later than another, and how the market acts. Then come up with 4 ideas I could test next. Also point out any problems with the data, like missing info, timing not matching up, or other things messing it up, and say how you would fix them."
 - **AI Output:** AI drafted a summary with findings, hypotheses, and data quality notes.
 - **Verification:** We matched each claim to notebook outputs and corrected any overstatements.
 - **Critique:**
@@ -106,7 +106,7 @@ Responsibility: All code is tested and our responsibility.
 ### 3. Dual-Axis Plot (Plot 3) & Control Variable Scatter Plots (Plot 7)
 
 - **Task:** Generate missing required visualizations (dual-axis co-movement plot, 4-panel scatter plots with regression lines).
-- **Prompt:** "Create a dual-axis plot where left y-axis is state-wide average ZHVI and right y-axis is mean annual hurricane cost, sharing x-axis as date. Then generate a 2×2 scatter plot of ZHVI vs. ZORI, Inventory, Days_on_Market, and Market_Temp, with density scatter and regression lines. Label axes with units and include correlation coefficients."
+- **Prompt:** "Make a graph with two sides. On the left side, show the average home value (ZHVI) for the whole state. On the right side show the average yearly hurricane cost. Both should use the same timeline (dates) on the bottom. Then make four small scatter plots that compare ZHVI with rent (ZORI), inventory, days on market, and market temp. Add trend lines and make the dots kind of dense. Label everything clearly and include the correlation numbers."
 - **AI Output:** AI generated script scaffolding for the missing figures.
 - **Verification:** We ran the script and confirmed saved outputs and labels.
 - **Critique:**
@@ -168,7 +168,7 @@ Responsibility: All code is tested and our responsibility.
 ### 2. Diagnostic Tests (Breusch-Pagan, VIF, Residual Plots)
 
 - **Task:** Add required diagnostics for heteroskedasticity, multicollinearity, and residual behavior.
-- **Prompt:** "Add Breusch-Pagan test, VIF table, residuals-vs-fitted plot, and Q-Q plot to the M3 script and save outputs to results folders."
+- **Prompt:** "Add Breusch Pagan test, VIF table, residuals vs fitted plot, and Q-Q plot to the M3 script and save outputs to results folders."
 - **AI Output:** Added diagnostic code and file exports.
 - **Verification:** We confirmed presence and correctness of `M3_diagnostics_summary.csv`, `M3_vif_table.csv`, and figure files.
 - **Critique:**
@@ -179,7 +179,7 @@ Responsibility: All code is tested and our responsibility.
 ### 3. Robustness Checks
 
 - **Task:** Implement at least three robustness checks.
-- **Prompt:** "Add robustness checks comparing clustered vs unadjusted SEs, alternative lag structures, and excluding March-May 2020. Include subgroup analysis if possible."
+- **Prompt:** "Add robustness checks comparing clustered vs unadjusted SEs, alternative lag structures and exclude March to May 2020. Include subgroup analysis if possible."
 - **AI Output:** Added four categories of robustness checks and output table generation.
 - **Verification:** We reviewed `M3_robustness_checks.csv` and confirmed all requested checks were present.
 - **Critique:**
@@ -201,7 +201,7 @@ Responsibility: All code is tested and our responsibility.
 ### 5. ML Comparison (Option 3)
 
 - **Task:** Compare OLS and Random Forest predictive performance.
-- **Prompt:** "Create a train/test comparison of OLS vs RandomForestRegressor using the same feature set; report R² and RMSE and export feature importances."
+- **Prompt:** "Create a train/test comparison of OLS vs RandomForestRegressor using the same feature set of report R² and RMSE and export feature importances."
 - **AI Output:** Added OLS/RF training, scoring, and feature-importance export.
 - **Verification:** We checked `M3_ml_comparison.csv` and `M3_random_forest_feature_importance.csv` for correct metrics/output.
 - **Critique:**
