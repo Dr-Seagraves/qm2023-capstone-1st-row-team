@@ -227,3 +227,34 @@ Responsibility: All code is tested and our responsibility.
 **Verification method:** All generated code was executed locally; outputs were inspected in `results/tables/` and `results/figures/`; reported values were cross-checked against saved files.
 
 **Responsibility:** AI assisted with drafting and coding speed. Final model choices, interpretation, validation, and submission responsibility remain with the team.
+
+---
+
+# Milestone 4 — Investment Memo Drafting
+
+## AI Tools Used
+
+- GitHub Copilot, Claude Opus 4.6
+
+## Task
+
+- Drafted the M4 investment memo from the verified M3 outputs, aligned the writing to the provided template, and tightened the language so the recommendations stayed descriptive rather than causal.
+
+## Prompt
+
+- "Use our M3 interpretation and results to write the policy, scenario, risk, caveat, and future research sections of the memo template. Keep the language conservative, include the exact statistics we verified, and format the references and AI audit summary clearly."
+
+## AI Output
+
+- Generated a first-pass memo structure with policy recommendations, scenario analysis language, risk framing, caveats, references, and an appendix summary for the final submission.
+
+## Verification
+
+- We cross-checked the memo against `M3_interpretation.md`, `results/tables/M3_regression_table.csv`, `results/tables/M3_robustness_checks.csv`, and the figures/tables referenced in the M3 deliverables.
+- We confirmed the team roster, data-source citations, and the sign and significance of the main interaction term before finalizing the draft.
+
+## Critique
+
+- What AI did well: It turned the quantitative results into a clean memo outline quickly and kept the report organized.
+- What needed human judgment: The first draft was too broad in a few places and leaned toward causal wording that our identification does not fully support.
+- What we changed: We rewrote the recommendations to emphasize selective caution, added explicit caveats about external validity and measurement error, and kept the scenario impacts clearly labeled as illustrative rather than estimated forecasts.
