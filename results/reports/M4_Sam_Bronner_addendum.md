@@ -1,17 +1,20 @@
 # Individual Addendum - Sam Bronner
 
-## Personal Contribution
+Name: Sam Bronner
+Team: 1st Row Team
+Date: May 1, 2026
 
-- [Insert specific task and milestone, e.g. drafted M4 memo section or helped with PDF formatting, 4 hours]
+1. Personal Contribution
+- Drafted and edited the M4 investment memo text (Executive Summary, Recommendations, Scenario Analysis) to align with verified M3 results (4 hours).
+- Cleaned up references and submission wording to improve readability for non-technical audiences (2 hours).
 
-## One Defended Decision
+2. One Defended Decision
+I recommended framing the scenario analysis as illustrative planning cases (baseline, optimistic, pessimistic) rather than presenting point forecasts. Because we did not produce a structural probability model for hurricanes and housing responses, that approach keeps the memo useful without overstating precision.
 
-[Write 2-4 sentences explaining one methodological decision you made or supported. Use evidence from your own work, such as lag choice, subgroup split, or diagnostic choice.]
+3. One Key Limitation
+The scenario probabilities and impact ranges are judgment-based and not estimated via a formal forecasting model. Readers should treat the scenario table as a planning tool rather than a statistical forecast.
 
-## One Key Limitation
-
-[Write 2-4 sentences describing the most important limitation of the analysis and why it matters. Be specific about the data, identification, or external validity issue.]
-
-## AI Audit Notes
-
-[Add any AI use specific to your own work that is not already covered in the team appendix. Include prompt, output, and how you verified it.]
+4. AI Audit Notes
+Prompt: “Help me tighten memo language so it stays conservative, readable, and consistent with our estimated results.”
+Output: AI suggested a cleaner executive summary and more cautious recommendation wording.
+Verification: I checked every numeric claim against the final M3 tables and revised wording that seemed too definitive.

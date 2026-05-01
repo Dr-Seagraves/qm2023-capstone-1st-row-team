@@ -32,7 +32,7 @@ How does hurricane activity and landfall exposure in Florida relate to key housi
 1. **Milestone 1 (Complete)**
    - Reproducible data pipeline implemented in `code/capstone_data_pipeline.py`.
    - Data quality documentation completed in `M1_data_quality_report.md`.
-   - AI usage disclosure completed in `AI_AUDIT_APPENDIX.md`.
+   - AI usage disclosure completed in `results/reports/AI_AUDIT_APPENDIX.md`.
 
 2. **Milestone 2 (Complete)**
    - EDA notebook completed in `code/M2_eda_dashboard.ipynb`.

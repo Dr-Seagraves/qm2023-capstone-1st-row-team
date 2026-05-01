@@ -1,17 +1,20 @@
 # Individual Addendum - Nevaeh Marquez
 
-## Personal Contribution
+Name: Nevaeh Marquez
+Team: 1st Row Team
+Date: May 1, 2026
 
-- [Insert specific task and milestone, e.g. cleaned and merged data in M1, 15 hours]
+1. Personal Contribution
+- Cleaned and merged Zillow and NOAA source files into the analysis-ready metro panel; checked missingness and monthly alignment across variables (4 hours).
+- Reviewed final summary statistics and source documentation so the M3 and M4 writeups used consistent variable definitions (2 hours).
 
-## One Defended Decision
+2. One Defended Decision
+I recommended using ZHVI as the main outcome because it has the most complete metro-level coverage and consistent monthly alignment. This choice preserved sample size for the primary fixed-effects estimation while allowing comparison across metros without losing many observations to sparse indicators.
 
-[Write 2-4 sentences explaining one methodological decision you made or supported. Use evidence from your own work, such as lag choice, subgroup split, or diagnostic choice.]
+3. One Key Limitation
+Some detailed market measures (sales count, days on market, inventory) are incomplete early in the sample, which forces some analyses to use shorter windows. This limitation reduces confidence for claims about those specific metrics across the full period; the strongest results are therefore for price growth (ZHVI).
 
-## One Key Limitation
-
-[Write 2-4 sentences describing the most important limitation of the analysis and why it matters. Be specific about the data, identification, or external validity issue.]
-
-## AI Audit Notes
-
-[Add any AI use specific to your own work that is not already covered in the team appendix. Include prompt, output, and how you verified it.]
+4. AI Audit Notes
+Prompt: “Help me phrase the data-cleaning and merge steps for a capstone addendum in plain language.”
+Output: AI suggested concise wording describing merges and missingness checks.
+Verification: I compared the suggested wording against the actual pipeline code and outputs and edited to match reality.

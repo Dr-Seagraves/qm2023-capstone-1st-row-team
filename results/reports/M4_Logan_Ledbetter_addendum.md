@@ -1,17 +1,20 @@
 # Individual Addendum - Logan Ledbetter
 
-## Personal Contribution
+Name: Logan Ledbetter
+Team: 1st Row Team
+Date: May 1, 2026
 
-- [Insert specific task and milestone, e.g. built the M3 fixed-effects model and diagnostics, 12 hours]
+1. Personal Contribution
+- Built and maintained the reproducibility workflow, including the pipeline wrapper and model execution steps that generate final tables and figures used in the memo (6 hours).
+- Debugged file-path, export, and output issues so the analysis can be rerun from a clean clone without manual edits (4 hours).
 
-## One Defended Decision
+2. One Defended Decision
+I advocated for a single reproducible workflow (one-command run) rather than separate manual steps. This ensured that the memo tables and figures come from the same cleaned dataset and identical lag structure, improving auditability and reproducibility.
 
-[Write 2-4 sentences explaining one methodological decision you made or supported. Use evidence from your own work, such as lag choice, subgroup split, or diagnostic choice.]
+3. One Key Limitation
+The pipeline depends on external source files and URLs that may change. If a source updates or becomes unavailable, exact reproduction requires cached source copies. This matters because results can shift if underlying input versions differ.
 
-## One Key Limitation
-
-[Write 2-4 sentences describing the most important limitation of the analysis and why it matters. Be specific about the data, identification, or external validity issue.]
-
-## AI Audit Notes
-
-[Add any AI use specific to your own work that is not already covered in the team appendix. Include prompt, output, and how you verified it.]
+4. AI Audit Notes
+Prompt: “Draft a clean Python wrapper for a reproducible capstone workflow and suggest export structure for tables/figures.”
+Output: AI provided a workflow skeleton and naming suggestions.
+Verification: I ran the full workflow from the repository root and verified the expected files were generated, keeping only the structure that matched the project.
